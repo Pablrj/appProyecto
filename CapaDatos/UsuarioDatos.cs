@@ -89,7 +89,7 @@ namespace CapaDatos
 
                     usuario.ID = Convert.ToInt32(reader["ID"].ToString());
                     usuario.NombreCompleto = reader["Nombre"].ToString();
-                    usuario.IDNivel = new Nivel().s Convert.ToInt32(reader["IDNivel"]);
+                    usuario.IDNivel = new NivelDatos().SeleccionarporId( Convert.ToInt32(reader["IDNivel"]));
                     usuario.Genero = reader["Genero"].ToString();
                     usuario.FechaNacimiento = Convert.ToDateTime(reader["FechaNacimiento"].ToString());
                     usuario.CorreoPadre = reader["CorreoPadre"].ToString();
@@ -203,7 +203,7 @@ namespace CapaDatos
                     }
                     usuario.ID = Convert.ToInt32(reader["ID"].ToString());
                     usuario.NombreCompleto = reader["Nombre"].ToString();
-                    usuario.IDNivel = Convert.ToInt32(reader["IDNivel"].ToString());
+                    usuario.IDNivel =new NivelDatos().SeleccionarporId( Convert.ToInt32(reader["IDNivel"].ToString()));
                     usuario.Genero = reader["Genero"].ToString();
                     usuario.FechaNacimiento = Convert.ToDateTime(reader["FechaNacimiento"].ToString());
                     usuario.CorreoPadre = reader["CorreoPadre"].ToString();

@@ -30,7 +30,7 @@ namespace CapaDatos
                     Nivel tipo = new Nivel()
                     {
                         ID = (int)reader["ID"],
-                        Descripcion = reader["Nombre"].ToString()
+                        Nombre = reader["Nombre"].ToString()
                     };
                     lista.Add(tipo);
                 }
@@ -43,7 +43,7 @@ namespace CapaDatos
             return lista;
         }
 
-        public TipoUsuario SeleccionarporId(int id)
+        public Nivel SeleccionarporId(int id)
         {
             //Paso 1:
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -51,7 +51,7 @@ namespace CapaDatos
             {
                 conexion.Open();
                 //Paso 2:
-                string sql = "SP_SeleccionarTipoUsuarioPorId";
+                string sql = "Sp_Nivel_SelectRow";
                 //Paso 3:
                 SqlCommand comando = new SqlCommand(sql);
                 comando.CommandType = CommandType.StoredProcedure;
@@ -61,10 +61,10 @@ namespace CapaDatos
                 //paso 5: convertir los datos del DataReader a objetos categoria
                 while (reader.Read())
                 {
-                    TipoUsuario tipo = new TipoUsuario()
+                    Nivel tipo = new Nivel()
                     {
                         ID = (int)reader["ID"],
-                        Descripcion = reader["Nombre"].ToString()
+                        Nombre = reader["Nombre"].ToString()
                     };
                     return tipo;//retorna la categoria encontrada
                 }
@@ -77,4 +77,4 @@ namespace CapaDatos
         }
     }
 }
-}
+

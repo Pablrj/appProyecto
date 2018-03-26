@@ -21,7 +21,7 @@ namespace CapaDatos
             {
                 conexion.Open();
                 //Paso 2:
-                string sql = "SP_SeleccionarTodosTipoUsuario";
+                string sql = "Sp_TipoUsuario_SelectAll";
                 //Paso 3:
                 SqlCommand comando = new SqlCommand(sql);
                 comando.CommandType = CommandType.StoredProcedure;
@@ -52,7 +52,7 @@ namespace CapaDatos
             {
                 conexion.Open();
                 //Paso 2:
-                string sql = "SP_SeleccionarTipoUsuarioPorId";
+                string sql = "Sp_TipoUsuario_SelectRow";
                 //Paso 3:
                 SqlCommand comando = new SqlCommand(sql);
                 comando.CommandType = CommandType.StoredProcedure;
