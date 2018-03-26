@@ -60,10 +60,11 @@
             // 
             // toolAgregar
             // 
+            this.toolAgregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolAgregar.Image = ((System.Drawing.Image)(resources.GetObject("toolAgregar.Image")));
             this.toolAgregar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolAgregar.Name = "toolAgregar";
-            this.toolAgregar.Size = new System.Drawing.Size(69, 22);
+            this.toolAgregar.Size = new System.Drawing.Size(53, 22);
             this.toolAgregar.Text = "Agregar";
             this.toolAgregar.ToolTipText = "Agregar";
             this.toolAgregar.Click += new System.EventHandler(this.toolAgregar_Click);
@@ -94,6 +95,7 @@
             this.toolEliminar.Size = new System.Drawing.Size(70, 22);
             this.toolEliminar.Text = "Eliminar";
             this.toolEliminar.ToolTipText = "Eliminar";
+            this.toolEliminar.Click += new System.EventHandler(this.toolEliminar_Click);
             // 
             // groupBox1
             // 
@@ -149,6 +151,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(420, 150);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // MantenimientoMateria
             // 
@@ -160,6 +163,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "MantenimientoMateria";
             this.Text = "MantenimientoMateria";
+            this.Load += new System.EventHandler(this.MantenimientoMateria_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

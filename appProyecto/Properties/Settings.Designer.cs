@@ -26,7 +26,8 @@ namespace appProyecto.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=ProyectoProgra3DB;User ID=pablo;Password=123456")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=ProyectoProgra3DB;Persist Security Info=True;User I" +
+            "D=pmora;Password=Pmora0813")]
         public string Conexion {
             get {
                 return ((string)(this["Conexion"]));
