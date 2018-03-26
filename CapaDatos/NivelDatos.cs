@@ -22,7 +22,7 @@ namespace CapaDatos
                 //Paso 2:
                 string sql = "Sp_Nivel_SelectAll";
                 //Paso 3:
-                SqlCommand comando = new SqlCommand(sql);
+                SqlCommand comando = new SqlCommand(sql,conexion);
                 comando.CommandType = CommandType.StoredProcedure;
                 IDataReader reader = comando.ExecuteReader();
                 while (reader.Read())

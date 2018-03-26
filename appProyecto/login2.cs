@@ -33,6 +33,9 @@ namespace appProyecto
             this.groupBox3.Visible = false;
             this.comboGenero.Items.Add("Hombre");
             this.comboGenero.Items.Add("Mujer");
+            comboNivel.DataSource = new CapaLogica.NivelLogica().SeleccionarTodos();
+            comboNivel.DisplayMember = "nombre";
+            comboNivel.ValueMember = "ID";
         
         }
 

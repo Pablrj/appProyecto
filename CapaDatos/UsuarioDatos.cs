@@ -26,7 +26,7 @@ namespace CapaDatos
                 //Agregar los parametros necesarios en la conexion
                 comando.Parameters.AddWithValue("@ID", usuario.ID);
                 comando.Parameters.AddWithValue("@NombreCompleto", usuario.NombreCompleto);
-                comando.Parameters.AddWithValue("@IDNivel", usuario.IDNivel);
+                comando.Parameters.AddWithValue("@IDNivel", usuario.IDNivel.ID);
                 comando.Parameters.AddWithValue("@Genero", usuario.Genero);
                 comando.Parameters.AddWithValue("@FechaNacimiento", usuario.FechaNacimiento);         
                 comando.Parameters.AddWithValue("@CorreoPadre", usuario.CorreoPadre);
