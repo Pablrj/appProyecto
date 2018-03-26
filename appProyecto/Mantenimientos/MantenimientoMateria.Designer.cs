@@ -35,10 +35,10 @@
             this.toolModificar = new System.Windows.Forms.ToolStripButton();
             this.toolEliminar = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textID = new System.Windows.Forms.TextBox();
             this.textDescripcion = new System.Windows.Forms.TextBox();
+            this.textID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -66,6 +66,7 @@
             this.toolAgregar.Size = new System.Drawing.Size(69, 22);
             this.toolAgregar.Text = "Agregar";
             this.toolAgregar.ToolTipText = "Agregar";
+            this.toolAgregar.Click += new System.EventHandler(this.toolAgregar_Click);
             // 
             // toolConsultar
             // 
@@ -108,14 +109,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Requeridos:";
             // 
-            // label1
+            // textDescripcion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
+            this.textDescripcion.Location = new System.Drawing.Point(104, 74);
+            this.textDescripcion.Name = "textDescripcion";
+            this.textDescripcion.Size = new System.Drawing.Size(100, 22);
+            this.textDescripcion.TabIndex = 3;
+            // 
+            // textID
+            // 
+            this.textID.Location = new System.Drawing.Point(104, 29);
+            this.textID.Name = "textID";
+            this.textID.Size = new System.Drawing.Size(100, 22);
+            this.textID.TabIndex = 2;
+            this.textID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -126,20 +133,14 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Decripcion";
             // 
-            // textID
+            // label1
             // 
-            this.textID.Location = new System.Drawing.Point(76, 29);
-            this.textID.Name = "textID";
-            this.textID.Size = new System.Drawing.Size(100, 22);
-            this.textID.TabIndex = 2;
-            this.textID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // textDescripcion
-            // 
-            this.textDescripcion.Location = new System.Drawing.Point(79, 74);
-            this.textDescripcion.Name = "textDescripcion";
-            this.textDescripcion.Size = new System.Drawing.Size(100, 22);
-            this.textDescripcion.TabIndex = 3;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ID";
             // 
             // dataGridView1
             // 
