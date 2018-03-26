@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoMateria));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolAgregar = new System.Windows.Forms.ToolStripButton();
-            this.toolConsultar = new System.Windows.Forms.ToolStripButton();
-            this.toolModificar = new System.Windows.Forms.ToolStripButton();
             this.toolEliminar = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textDescripcion = new System.Windows.Forms.TextBox();
@@ -49,8 +47,6 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolAgregar,
-            this.toolConsultar,
-            this.toolModificar,
             this.toolEliminar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -68,24 +64,6 @@
             this.toolAgregar.Text = "Agregar";
             this.toolAgregar.ToolTipText = "Agregar";
             this.toolAgregar.Click += new System.EventHandler(this.toolAgregar_Click);
-            // 
-            // toolConsultar
-            // 
-            this.toolConsultar.Image = ((System.Drawing.Image)(resources.GetObject("toolConsultar.Image")));
-            this.toolConsultar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolConsultar.Name = "toolConsultar";
-            this.toolConsultar.Size = new System.Drawing.Size(78, 22);
-            this.toolConsultar.Text = "Consultar";
-            this.toolConsultar.ToolTipText = "Consultar";
-            // 
-            // toolModificar
-            // 
-            this.toolModificar.Image = ((System.Drawing.Image)(resources.GetObject("toolModificar.Image")));
-            this.toolModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolModificar.Name = "toolModificar";
-            this.toolModificar.Size = new System.Drawing.Size(78, 22);
-            this.toolModificar.Text = "Modificar";
-            this.toolModificar.ToolTipText = "Modificar";
             // 
             // toolEliminar
             // 
@@ -116,14 +94,14 @@
             this.textDescripcion.Location = new System.Drawing.Point(104, 74);
             this.textDescripcion.Name = "textDescripcion";
             this.textDescripcion.Size = new System.Drawing.Size(100, 22);
-            this.textDescripcion.TabIndex = 3;
+            this.textDescripcion.TabIndex = 2;
             // 
             // textID
             // 
             this.textID.Location = new System.Drawing.Point(104, 29);
             this.textID.Name = "textID";
             this.textID.Size = new System.Drawing.Size(100, 22);
-            this.textID.TabIndex = 2;
+            this.textID.TabIndex = 1;
             this.textID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
@@ -153,7 +131,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(420, 150);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.TabIndex = 3;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // MantenimientoMateria
@@ -181,8 +159,6 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolAgregar;
-        private System.Windows.Forms.ToolStripButton toolConsultar;
-        private System.Windows.Forms.ToolStripButton toolModificar;
         private System.Windows.Forms.ToolStripButton toolEliminar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textDescripcion;

@@ -182,7 +182,7 @@ namespace appProyecto
                             TelefonoPadre = "",
                             QR = "",
                             Estado=false,
-                            Guia=false,
+                           
                         
 
 

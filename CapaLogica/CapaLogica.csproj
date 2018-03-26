@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AulaLogica.cs" />
+    <Compile Include="HorarioLogica.cs" />
     <Compile Include="MateriaLogica.cs" />
     <Compile Include="NivelLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

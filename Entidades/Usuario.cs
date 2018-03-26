@@ -20,7 +20,7 @@ namespace Entidades
         public abstract string Contraseña { get; set; }
         public abstract bool Estado { get; set; }
         public abstract string QR { get; set; }
-        public abstract bool Guia { get; set; }
+      
 
     }
 }

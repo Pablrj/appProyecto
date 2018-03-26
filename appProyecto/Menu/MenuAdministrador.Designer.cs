@@ -29,25 +29,27 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.butGrupo = new System.Windows.Forms.Button();
+            this.butPadre = new System.Windows.Forms.Button();
+            this.butEstudiante = new System.Windows.Forms.Button();
             this.butMateria = new System.Windows.Forms.Button();
             this.butProfesor = new System.Windows.Forms.Button();
-            this.butEstudiante = new System.Windows.Forms.Button();
-            this.butPadre = new System.Windows.Forms.Button();
-            this.butGrupo = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.butNiveles = new System.Windows.Forms.Button();
-            this.butAsistencia = new System.Windows.Forms.Button();
-            this.butAusencias = new System.Windows.Forms.Button();
-            this.butEvaluacion = new System.Windows.Forms.Button();
             this.butNota = new System.Windows.Forms.Button();
+            this.butEvaluacion = new System.Windows.Forms.Button();
+            this.butAusencias = new System.Windows.Forms.Button();
+            this.butAsistencia = new System.Windows.Forms.Button();
+            this.butNiveles = new System.Windows.Forms.Button();
             this.butCancelar = new System.Windows.Forms.Button();
             this.butAceptar = new System.Windows.Forms.Button();
+            this.butAula = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.butAula);
             this.groupBox1.Controls.Add(this.butGrupo);
             this.groupBox1.Controls.Add(this.butPadre);
             this.groupBox1.Controls.Add(this.butEstudiante);
@@ -55,10 +57,40 @@
             this.groupBox1.Controls.Add(this.butProfesor);
             this.groupBox1.Location = new System.Drawing.Point(12, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 412);
+            this.groupBox1.Size = new System.Drawing.Size(404, 412);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mantenimientos";
+            // 
+            // butGrupo
+            // 
+            this.butGrupo.Location = new System.Drawing.Point(6, 311);
+            this.butGrupo.Name = "butGrupo";
+            this.butGrupo.Size = new System.Drawing.Size(188, 74);
+            this.butGrupo.TabIndex = 4;
+            this.butGrupo.Text = "Grupo";
+            this.butGrupo.UseVisualStyleBackColor = true;
+            this.butGrupo.Click += new System.EventHandler(this.butGrupo_Click);
+            // 
+            // butPadre
+            // 
+            this.butPadre.Location = new System.Drawing.Point(6, 241);
+            this.butPadre.Name = "butPadre";
+            this.butPadre.Size = new System.Drawing.Size(188, 74);
+            this.butPadre.TabIndex = 3;
+            this.butPadre.Text = "Padre";
+            this.butPadre.UseVisualStyleBackColor = true;
+            this.butPadre.Click += new System.EventHandler(this.butPadre_Click);
+            // 
+            // butEstudiante
+            // 
+            this.butEstudiante.Location = new System.Drawing.Point(6, 171);
+            this.butEstudiante.Name = "butEstudiante";
+            this.butEstudiante.Size = new System.Drawing.Size(188, 74);
+            this.butEstudiante.TabIndex = 2;
+            this.butEstudiante.Text = "Estudiante";
+            this.butEstudiante.UseVisualStyleBackColor = true;
+            this.butEstudiante.Click += new System.EventHandler(this.butEstudiante_Click);
             // 
             // butMateria
             // 
@@ -80,36 +112,6 @@
             this.butProfesor.UseVisualStyleBackColor = true;
             this.butProfesor.Click += new System.EventHandler(this.butProfesor_Click);
             // 
-            // butEstudiante
-            // 
-            this.butEstudiante.Location = new System.Drawing.Point(6, 171);
-            this.butEstudiante.Name = "butEstudiante";
-            this.butEstudiante.Size = new System.Drawing.Size(188, 74);
-            this.butEstudiante.TabIndex = 2;
-            this.butEstudiante.Text = "Estudiante";
-            this.butEstudiante.UseVisualStyleBackColor = true;
-            this.butEstudiante.Click += new System.EventHandler(this.butEstudiante_Click);
-            // 
-            // butPadre
-            // 
-            this.butPadre.Location = new System.Drawing.Point(6, 241);
-            this.butPadre.Name = "butPadre";
-            this.butPadre.Size = new System.Drawing.Size(188, 74);
-            this.butPadre.TabIndex = 3;
-            this.butPadre.Text = "Padre";
-            this.butPadre.UseVisualStyleBackColor = true;
-            this.butPadre.Click += new System.EventHandler(this.butPadre_Click);
-            // 
-            // butGrupo
-            // 
-            this.butGrupo.Location = new System.Drawing.Point(6, 311);
-            this.butGrupo.Name = "butGrupo";
-            this.butGrupo.Size = new System.Drawing.Size(188, 74);
-            this.butGrupo.TabIndex = 4;
-            this.butGrupo.Text = "Grupo";
-            this.butGrupo.UseVisualStyleBackColor = true;
-            this.butGrupo.Click += new System.EventHandler(this.butGrupo_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.butNota);
@@ -117,39 +119,21 @@
             this.groupBox2.Controls.Add(this.butAusencias);
             this.groupBox2.Controls.Add(this.butAsistencia);
             this.groupBox2.Controls.Add(this.butNiveles);
-            this.groupBox2.Location = new System.Drawing.Point(218, 22);
+            this.groupBox2.Location = new System.Drawing.Point(422, 22);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 385);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Reportes";
             // 
-            // butNiveles
+            // butNota
             // 
-            this.butNiveles.Location = new System.Drawing.Point(0, 31);
-            this.butNiveles.Name = "butNiveles";
-            this.butNiveles.Size = new System.Drawing.Size(188, 74);
-            this.butNiveles.TabIndex = 1;
-            this.butNiveles.Text = "Niveles";
-            this.butNiveles.UseVisualStyleBackColor = true;
-            // 
-            // butAsistencia
-            // 
-            this.butAsistencia.Location = new System.Drawing.Point(0, 100);
-            this.butAsistencia.Name = "butAsistencia";
-            this.butAsistencia.Size = new System.Drawing.Size(188, 74);
-            this.butAsistencia.TabIndex = 2;
-            this.butAsistencia.Text = "Asistencia";
-            this.butAsistencia.UseVisualStyleBackColor = true;
-            // 
-            // butAusencias
-            // 
-            this.butAusencias.Location = new System.Drawing.Point(0, 171);
-            this.butAusencias.Name = "butAusencias";
-            this.butAusencias.Size = new System.Drawing.Size(188, 74);
-            this.butAusencias.TabIndex = 3;
-            this.butAusencias.Text = "Ausencias";
-            this.butAusencias.UseVisualStyleBackColor = true;
+            this.butNota.Location = new System.Drawing.Point(0, 311);
+            this.butNota.Name = "butNota";
+            this.butNota.Size = new System.Drawing.Size(188, 74);
+            this.butNota.TabIndex = 5;
+            this.butNota.Text = "Nota";
+            this.butNota.UseVisualStyleBackColor = true;
             // 
             // butEvaluacion
             // 
@@ -160,14 +144,32 @@
             this.butEvaluacion.Text = "Evaluacion";
             this.butEvaluacion.UseVisualStyleBackColor = true;
             // 
-            // butNota
+            // butAusencias
             // 
-            this.butNota.Location = new System.Drawing.Point(0, 311);
-            this.butNota.Name = "butNota";
-            this.butNota.Size = new System.Drawing.Size(188, 74);
-            this.butNota.TabIndex = 5;
-            this.butNota.Text = "Nota";
-            this.butNota.UseVisualStyleBackColor = true;
+            this.butAusencias.Location = new System.Drawing.Point(0, 171);
+            this.butAusencias.Name = "butAusencias";
+            this.butAusencias.Size = new System.Drawing.Size(188, 74);
+            this.butAusencias.TabIndex = 3;
+            this.butAusencias.Text = "Ausencias";
+            this.butAusencias.UseVisualStyleBackColor = true;
+            // 
+            // butAsistencia
+            // 
+            this.butAsistencia.Location = new System.Drawing.Point(0, 100);
+            this.butAsistencia.Name = "butAsistencia";
+            this.butAsistencia.Size = new System.Drawing.Size(188, 74);
+            this.butAsistencia.TabIndex = 2;
+            this.butAsistencia.Text = "Asistencia";
+            this.butAsistencia.UseVisualStyleBackColor = true;
+            // 
+            // butNiveles
+            // 
+            this.butNiveles.Location = new System.Drawing.Point(0, 31);
+            this.butNiveles.Name = "butNiveles";
+            this.butNiveles.Size = new System.Drawing.Size(188, 74);
+            this.butNiveles.TabIndex = 1;
+            this.butNiveles.Text = "Niveles";
+            this.butNiveles.UseVisualStyleBackColor = true;
             // 
             // butCancelar
             // 
@@ -186,6 +188,16 @@
             this.butAceptar.TabIndex = 7;
             this.butAceptar.Text = "Aceptar";
             this.butAceptar.UseVisualStyleBackColor = true;
+            // 
+            // butAula
+            // 
+            this.butAula.Location = new System.Drawing.Point(200, 31);
+            this.butAula.Name = "butAula";
+            this.butAula.Size = new System.Drawing.Size(188, 74);
+            this.butAula.TabIndex = 5;
+            this.butAula.Text = "Aula";
+            this.butAula.UseVisualStyleBackColor = true;
+            this.butAula.Click += new System.EventHandler(this.butAula_Click);
             // 
             // MenuAdministrador
             // 
@@ -220,5 +232,6 @@
         private System.Windows.Forms.Button butNiveles;
         private System.Windows.Forms.Button butCancelar;
         private System.Windows.Forms.Button butAceptar;
+        private System.Windows.Forms.Button butAula;
     }
 }

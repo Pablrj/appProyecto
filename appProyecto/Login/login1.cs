@@ -28,13 +28,13 @@ namespace appProyecto
 
         private void butRegistrarse_Click(object sender, EventArgs e)
         {
-            login2 lo = new login2();
-            lo.Show();
-            this.Visible = false;
+            //login2 lo = new login2();
+            //lo.Show();
+           // this.Visible = false;
 
 
-            //MenuAdministrador frm = new MenuAdministrador();
-            //frm.ShowDialog();
+            MenuAdministrador frm = new MenuAdministrador();
+            frm.ShowDialog();
         }
 
         private void butAceptar_Click(object sender, EventArgs e)

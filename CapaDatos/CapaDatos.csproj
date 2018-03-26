@@ -50,7 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AulaDatos.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="HorarioDatos.cs" />
     <Compile Include="MateriaDatos.cs" />
     <Compile Include="NivelDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

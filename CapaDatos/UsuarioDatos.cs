@@ -35,7 +35,7 @@ namespace CapaDatos
                 comando.Parameters.AddWithValue("@Contraseña", usuario.Contraseña);
                 comando.Parameters.AddWithValue("@Estado", usuario.Estado);
                 comando.Parameters.AddWithValue("@QR", usuario.QR);
-                comando.Parameters.AddWithValue("Guia", usuario.Guia);
+             
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.ExecuteNonQuery();
             }

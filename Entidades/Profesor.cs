@@ -22,9 +22,6 @@ namespace Entidades
 
         public override string QR { get; set; }
 
-
-        public override bool Guia { get; set; }
-
         public List<Materia> listaMateria { get; set; }
 
     }

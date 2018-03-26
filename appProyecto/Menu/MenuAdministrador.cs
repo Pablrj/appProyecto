@@ -46,5 +46,11 @@ namespace appProyecto
             MantenimientoGrupo gru = new MantenimientoGrupo();
             gru.Show();
         }
+
+        private void butAula_Click(object sender, EventArgs e)
+        {
+            Mantenimientos.MantenimientoAula a = new Mantenimientos.MantenimientoAula();
+            a.Show();
+        }
     }
 }
