@@ -52,6 +52,7 @@
     <Compile Include="AulaLogica.cs" />
     <Compile Include="HorarioLogica.cs" />
     <Compile Include="MateriaLogica.cs" />
+    <Compile Include="MatProfLogica.cs" />
     <Compile Include="NivelLogica.cs" />
     <Compile Include="ProfesorLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
