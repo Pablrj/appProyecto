@@ -34,6 +34,21 @@ namespace appProyecto
           
         }
 
+        public Usuario ObtenerUsuario()
+        {
+            List<Usuario> lista = new CapaLogica.UsuarioLogica().ObtenerTodos();
+
+            Usuario usuario = null;
+
+            foreach(Usuario usu in lista)
+            {
+                if(usu.ID == Convert.ToInt32(textIdentificacion.Text) && usu.Contraseña.Equals(textContraseña.Text.Trim())){
+                    usuario = usu;
+                }
+            }
+            return usuario;
+        }
+
         private void butAceptar_Click(object sender, EventArgs e)
         {
             try
@@ -47,25 +62,25 @@ namespace appProyecto
                     throw new Exception("Debe digita la contraseña");
                 }
 
-                if (usuarioLogica.ObtenerPorId(Convert.ToInt32( this.textIdentificacion.Text)) != null && UsuarioLogica.SHA1Encrypt(this.textContraseña.Text) == usuarioLogica.ObtenerPorId(Convert.ToInt32(this.textIdentificacion.Text)).Contraseña)
+                if (ObtenerUsuario()!=null)
                 {
-                    Usuario usuario = usuarioLogica.ObtenerPorId(Convert.ToInt32(this.textIdentificacion.Text));
-                    if (usuario.IDTipoUsuario.ID==1)
+                    
+                    if (ObtenerUsuario().IDTipoUsuario.ID==1)
                     {
                         MenuAdministrador frm = new MenuAdministrador();
                         frm.ShowDialog();
                     }
-                    if (usuario.IDTipoUsuario.ID == 2)
+                    if (ObtenerUsuario().IDTipoUsuario.ID == 2)
                     {
                         MenuProfesor frm = new MenuProfesor();
                         frm.ShowDialog();
                     }
-                    if (usuario.IDTipoUsuario.ID == 3)
+                    if (ObtenerUsuario().IDTipoUsuario.ID == 3)
                     {
                         MenuEstudiante frm = new MenuEstudiante();
                         frm.ShowDialog();
                     }
-                    if (usuario.IDTipoUsuario.ID == 4)
+                    if (ObtenerUsuario().IDTipoUsuario.ID == 4)
                     {
                         MenuPadre frm = new MenuPadre();
                         frm.ShowDialog();

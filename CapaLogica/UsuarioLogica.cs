@@ -67,20 +67,6 @@ namespace CapaLogica
             }
         }
 
-        public static string SHA1Encrypt(string password)
-        {
-            System.Security.Cryptography.HashAlgorithm hashValue = new
-            System.Security.Cryptography.SHA1CryptoServiceProvider();
-
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(password);
-
-            byte[] byteHash = hashValue.ComputeHash(bytes);
-
-            hashValue.Clear();
-
-            return (Convert.ToBase64String(byteHash));
-
-
-        }
+        
     }
 }
