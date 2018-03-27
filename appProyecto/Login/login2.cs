@@ -119,7 +119,6 @@ namespace appProyecto
                             MessageBox.Show("Las contraseñs deben de ser iguales");
                             return;
                         }
-                        usuario.Contraseña = UsuarioLogica.SHA1Encrypt(textContraseña.Text);
                         usuarioLogica.Guardar(usuario);
                         login1 lo = new login1();
                         lo.Show();
@@ -178,7 +177,6 @@ namespace appProyecto
                             MessageBox.Show("Las contraseñs deben de ser iguales");
                             return;
                         }
-                        usuario.Contraseña = UsuarioLogica.SHA1Encrypt(textContrasennaPadre.Text);
                         usuarioLogica.Guardar(usuario);
                         login1 lo = new login1();
                         lo.Show();
@@ -241,7 +239,6 @@ namespace appProyecto
                             MessageBox.Show("Las contraseñs deben de ser iguales");
                             return;
                         }
-                        usuario.Contraseña = UsuarioLogica.SHA1Encrypt(textcContrasennaProfesor.Text);
                         usuarioLogica.Guardar(usuario);
                         login1 lo = new login1();
                         lo.Show();
