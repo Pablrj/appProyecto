@@ -62,10 +62,10 @@ namespace appProyecto
                     throw new Exception("Debe digita la contraseña");
                 }
 
-                if (ObtenerUsuario()!=null)
+                if (usuarioLogica.ObtenerPorId(Convert.ToInt32( this.textIdentificacion.Text)) != null && UsuarioLogica.SHA1Encrypt(this.textContraseña.Text) == usuarioLogica.ObtenerPorId(Convert.ToInt32(this.textIdentificacion.Text)).Contraseña)
                 {
-                    
-                    if (ObtenerUsuario().IDTipoUsuario.ID==1)
+                    Usuario usuario = usuarioLogica.ObtenerPorId(Convert.ToInt32(this.textIdentificacion.Text));
+                    if (usuario.IDTipoUsuario.ID==1)
                     {
                         MenuAdministrador frm = new MenuAdministrador();
                         frm.ShowDialog();
@@ -88,11 +88,8 @@ namespace appProyecto
                     this.textContraseña.Text = "";
                     this.textIdentificacion.Text = "";
 
-                }
-                else
-                {
-                    throw new Exception("Usuario o Contraseña incorrectos");
-                }
+                
+               
             }
             catch (Exception ex)
             {
