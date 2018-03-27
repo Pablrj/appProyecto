@@ -52,5 +52,10 @@ namespace appProyecto
             Mantenimientos.MantenimientoAula a = new Mantenimientos.MantenimientoAula();
             a.Show();
         }
+
+        private void butHorario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

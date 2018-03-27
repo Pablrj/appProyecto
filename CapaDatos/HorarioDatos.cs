@@ -21,14 +21,14 @@ namespace CapaDatos
                 //Abrir la conexion
                 conexion.Open();
                 //Paso 2: Instruccion SP
-                string sql = "SP_Materia_Insert";
+                string sql = "Sp_Horario_Insert";
 
                 //Paso 3: Comando para ejecutar el paso 2
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
                 comando.Parameters.AddWithValue("@Id", mat.ID);
-                comando.Parameters.AddWithValue("@Nombre", mat.horario);
+                comando.Parameters.AddWithValue("@Horario", mat.horario);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -60,14 +60,14 @@ namespace CapaDatos
                 //Abrir la conexion
                 conexion.Open();
                 //Paso 2: Instruccion
-                string sql = "SP_Materia_Update";
+                string sql = "Sp_Horario_Update";
 
                 //Paso 3: Comando para ejecutar el paso 2
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
                 comando.Parameters.AddWithValue("@Id", mat.ID);
-                comando.Parameters.AddWithValue("@Nombre", mat.horario);
+                comando.Parameters.AddWithValue("@Horario", mat.horario);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -100,7 +100,7 @@ namespace CapaDatos
                 //Abrir la conexion
                 conexion.Open();
                 //Paso 2: Instruccion
-                string sql = "SP_Materia_DeleteRow";
+                string sql = "Sp_Horario_DeleteRow";
 
                 //Paso 3: Comando para ejecutar el paso 2
                 SqlCommand comando = new SqlCommand(sql, conexion);
@@ -142,7 +142,7 @@ namespace CapaDatos
                 //Abrir la conexion
                 conexion.Open();
                 //Paso 2: Instruccion
-                string sql = "SP_Materia_SelectRow";
+                string sql = "Sp_Horario_SelectRow";
 
                 //Paso 3: Comando para ejecutar el paso 2
                 SqlCommand comando = new SqlCommand(sql, conexion);
@@ -195,7 +195,7 @@ namespace CapaDatos
                 //Abrir la conexion
                 conexion.Open();
                 //Paso 2: Instruccion
-                string sql = "SP_Materia_SelectAll";
+                string sql = "Sp_Horario_SelectAll";
 
                 //Paso 3: Comando para ejecutar el paso 2
                 SqlCommand comando = new SqlCommand(sql, conexion);

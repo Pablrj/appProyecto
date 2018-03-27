@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.butAula = new System.Windows.Forms.Button();
             this.butGrupo = new System.Windows.Forms.Button();
             this.butPadre = new System.Windows.Forms.Button();
             this.butEstudiante = new System.Windows.Forms.Button();
@@ -42,13 +43,14 @@
             this.butNiveles = new System.Windows.Forms.Button();
             this.butCancelar = new System.Windows.Forms.Button();
             this.butAceptar = new System.Windows.Forms.Button();
-            this.butAula = new System.Windows.Forms.Button();
+            this.butHorario = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.butHorario);
             this.groupBox1.Controls.Add(this.butAula);
             this.groupBox1.Controls.Add(this.butGrupo);
             this.groupBox1.Controls.Add(this.butPadre);
@@ -61,6 +63,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mantenimientos";
+            // 
+            // butAula
+            // 
+            this.butAula.Location = new System.Drawing.Point(200, 31);
+            this.butAula.Name = "butAula";
+            this.butAula.Size = new System.Drawing.Size(188, 74);
+            this.butAula.TabIndex = 5;
+            this.butAula.Text = "Aula";
+            this.butAula.UseVisualStyleBackColor = true;
+            this.butAula.Click += new System.EventHandler(this.butAula_Click);
             // 
             // butGrupo
             // 
@@ -189,15 +201,15 @@
             this.butAceptar.Text = "Aceptar";
             this.butAceptar.UseVisualStyleBackColor = true;
             // 
-            // butAula
+            // butHorario
             // 
-            this.butAula.Location = new System.Drawing.Point(200, 31);
-            this.butAula.Name = "butAula";
-            this.butAula.Size = new System.Drawing.Size(188, 74);
-            this.butAula.TabIndex = 5;
-            this.butAula.Text = "Aula";
-            this.butAula.UseVisualStyleBackColor = true;
-            this.butAula.Click += new System.EventHandler(this.butAula_Click);
+            this.butHorario.Location = new System.Drawing.Point(200, 100);
+            this.butHorario.Name = "butHorario";
+            this.butHorario.Size = new System.Drawing.Size(188, 74);
+            this.butHorario.TabIndex = 6;
+            this.butHorario.Text = "Horario";
+            this.butHorario.UseVisualStyleBackColor = true;
+            this.butHorario.Click += new System.EventHandler(this.butHorario_Click);
             // 
             // MenuAdministrador
             // 
@@ -233,5 +245,6 @@
         private System.Windows.Forms.Button butCancelar;
         private System.Windows.Forms.Button butAceptar;
         private System.Windows.Forms.Button butAula;
+        private System.Windows.Forms.Button butHorario;
     }
 }
