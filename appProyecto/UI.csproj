@@ -70,6 +70,18 @@
       <DependentUpon>login1.cs</DependentUpon>
     </Compile>
     <Compile Include="LogManager.cs" />
+    <Compile Include="Mantenimientos\frmBuscarMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmBuscarMat.Designer.cs">
+      <DependentUpon>frmBuscarMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMatProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMatProf.Designer.cs">
+      <DependentUpon>frmMatProf.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\MantenimientoAula.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +155,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\login1.resx">
       <DependentUpon>login1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmBuscarMat.resx">
+      <DependentUpon>frmBuscarMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmMatProf.resx">
+      <DependentUpon>frmMatProf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\MantenimientoAula.resx">
       <DependentUpon>MantenimientoAula.cs</DependentUpon>

@@ -54,6 +54,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="HorarioDatos.cs" />
     <Compile Include="MateriaDatos.cs" />
+    <Compile Include="MatProfDatos.cs" />
     <Compile Include="NivelDatos.cs" />
     <Compile Include="ProfesorDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
