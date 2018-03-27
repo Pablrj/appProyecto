@@ -16,7 +16,10 @@ namespace CapaLogica
 
         public void Guardar(Usuario usuario)
         {
-
+            if (String.IsNullOrWhiteSpace(usuario.ID.ToString()))
+            {
+                throw new ApplicationException("El Identificacion es requerido");
+            }
 
             if (datos.SeleccionarporId(usuario.ID) == null)
             {

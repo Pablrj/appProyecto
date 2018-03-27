@@ -30,12 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textIdentificacion = new System.Windows.Forms.TextBox();
             this.textContraseña = new System.Windows.Forms.TextBox();
             this.butAceptar = new System.Windows.Forms.Button();
             this.butCancelar = new System.Windows.Forms.Button();
             this.butRegistrarse = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textIdentificacion = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -57,13 +58,6 @@
             this.label2.Size = new System.Drawing.Size(95, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Contraseña";
-            // 
-            // textIdentificacion
-            // 
-            this.textIdentificacion.Location = new System.Drawing.Point(195, 75);
-            this.textIdentificacion.Name = "textIdentificacion";
-            this.textIdentificacion.Size = new System.Drawing.Size(136, 20);
-            this.textIdentificacion.TabIndex = 2;
             // 
             // textContraseña
             // 
@@ -113,18 +107,37 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Iniciar Seccion:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(60, 215);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textIdentificacion
+            // 
+            this.textIdentificacion.Location = new System.Drawing.Point(195, 76);
+            this.textIdentificacion.Mask = "00000000";
+            this.textIdentificacion.Name = "textIdentificacion";
+            this.textIdentificacion.Size = new System.Drawing.Size(136, 20);
+            this.textIdentificacion.TabIndex = 9;
+            // 
             // login1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(419, 298);
+            this.Controls.Add(this.textIdentificacion);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.butRegistrarse);
             this.Controls.Add(this.butCancelar);
             this.Controls.Add(this.butAceptar);
             this.Controls.Add(this.textContraseña);
-            this.Controls.Add(this.textIdentificacion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "login1";
@@ -138,11 +151,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textIdentificacion;
         private System.Windows.Forms.TextBox textContraseña;
         private System.Windows.Forms.Button butAceptar;
         private System.Windows.Forms.Button butCancelar;
         private System.Windows.Forms.Button butRegistrarse;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MaskedTextBox textIdentificacion;
     }
 }

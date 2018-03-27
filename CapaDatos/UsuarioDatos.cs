@@ -26,17 +26,16 @@ namespace CapaDatos
                 //Agregar los parametros necesarios en la conexion
                 comando.Parameters.AddWithValue("@ID", usuario.ID);
                 comando.Parameters.AddWithValue("@NombreCompleto", usuario.NombreCompleto);
+                comando.Parameters.AddWithValue("@IDTipoUsuario", usuario.IDTipoUsuario.ID);
                 comando.Parameters.AddWithValue("@IDNivel", usuario.IDNivel.ID);
                 comando.Parameters.AddWithValue("@Genero", usuario.Genero);
                 comando.Parameters.AddWithValue("@FechaNacimiento", usuario.FechaNacimiento);         
                 comando.Parameters.AddWithValue("@CorreoPadre", usuario.CorreoPadre);
-                comando.Parameters.AddWithValue("@TelefonoPadre", usuario.TelefonoPadre);                         
-                comando.Parameters.AddWithValue("@IDTipoUsuario", usuario.IDTipoUsuario.ID);
+                comando.Parameters.AddWithValue("@TelefonoPadre", usuario.TelefonoPadre);                                      
                 comando.Parameters.AddWithValue("@Contraseña", usuario.Contraseña);
                 comando.Parameters.AddWithValue("@Estado", usuario.Estado);
-                comando.Parameters.AddWithValue("@QR", usuario.QR);
-             
-                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@QR", usuario.QR);      
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.ExecuteNonQuery();
             }
             catch (Exception)
@@ -97,7 +96,7 @@ namespace CapaDatos
                     usuario.Contraseña = reader["Contraseña"].ToString();
                     usuario.Estado = Convert.ToBoolean(reader["Estado"].ToString());
                     usuario.IDTipoUsuario = new TipoUsuarioDatos().SeleccionarporId(Convert.ToInt32(reader["IDTipoUsuario"]));
-                        
+                    usuario.QR = reader["QR"].ToString();    
                     lista.Add(usuario);
                 }
             }
@@ -121,21 +120,20 @@ namespace CapaDatos
                 //Crea un comando con la conexion y el sql
                 SqlCommand comando = new SqlCommand(sql,conexion);
 
-               
+
                 //Agregar los parametros necesarios en la conexion
                 comando.Parameters.AddWithValue("@ID", usuario.ID);
                 comando.Parameters.AddWithValue("@NombreCompleto", usuario.NombreCompleto);
-                comando.Parameters.AddWithValue("@IDNivel", usuario.IDNivel);
+                comando.Parameters.AddWithValue("@IDTipoUsuario", usuario.IDTipoUsuario.ID);
+                comando.Parameters.AddWithValue("@IDNivel", usuario.IDNivel.ID);
                 comando.Parameters.AddWithValue("@Genero", usuario.Genero);
                 comando.Parameters.AddWithValue("@FechaNacimiento", usuario.FechaNacimiento);
                 comando.Parameters.AddWithValue("@CorreoPadre", usuario.CorreoPadre);
                 comando.Parameters.AddWithValue("@TelefonoPadre", usuario.TelefonoPadre);
-                comando.Parameters.AddWithValue("@IDTipoUsuario", usuario.IDTipoUsuario.ID);
                 comando.Parameters.AddWithValue("@Contraseña", usuario.Contraseña);
                 comando.Parameters.AddWithValue("@Estado", usuario.Estado);
-
-                comando.CommandType = CommandType.StoredProcedure;
-
+                comando.Parameters.AddWithValue("@QR", usuario.QR);
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.ExecuteNonQuery();
             }
             catch (Exception)
@@ -155,7 +153,7 @@ namespace CapaDatos
                 SqlCommand comando = new SqlCommand(sql,conexion);
                 //Agregar los parametros necesarios en la conexion
                 comando.Parameters.AddWithValue("@id", id);
-                comando.CommandType = CommandType.StoredProcedure;
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.ExecuteNonQuery();
             }
             catch (Exception)
@@ -179,7 +177,7 @@ namespace CapaDatos
                 comando.Parameters.AddWithValue("@id", id);
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
                 //Paso 4: ejecutar el comando
-                IDataReader reader = comando.ExecuteReader();
+                SqlDataReader reader = comando.ExecuteReader();
                 //paso 5: convertir los datos del DataReader a objetos categoria
                 while (reader.Read())
                 {
@@ -211,7 +209,7 @@ namespace CapaDatos
                     usuario.Contraseña = reader["Contraseña"].ToString();
                     usuario.Estado = Convert.ToBoolean(reader["Estado"].ToString());
                     usuario.IDTipoUsuario = new TipoUsuarioDatos().SeleccionarporId(Convert.ToInt32(reader["IDTipoUsuario"]));
-
+                    usuario.QR = reader["QR"].ToString();
                     return usuario;//retorna la categoria encontrada
                 }
                 return null;
@@ -221,8 +219,6 @@ namespace CapaDatos
                 throw;
             }
         }
-        private class FactoryDatabase
-        {
-        }
+      
     }
 }

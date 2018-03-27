@@ -28,13 +28,10 @@ namespace appProyecto
 
         private void butRegistrarse_Click(object sender, EventArgs e)
         {
-            //login2 lo = new login2();
-            //lo.Show();
-           // this.Visible = false;
-
-
-            MenuAdministrador frm = new MenuAdministrador();
-            frm.ShowDialog();
+            login2 lo = new login2();
+            lo.Show();
+            this.Visible = false;
+          
         }
 
         private void butAceptar_Click(object sender, EventArgs e)
@@ -44,12 +41,10 @@ namespace appProyecto
                 if (this.textIdentificacion.Text.Trim() == "")
                 {
                     throw new Exception("Debe digitar el usuario ");
-
                 }
                 if (this.textContraseña.Text.Trim() == "")
                 {
                     throw new Exception("Debe digita la contraseña");
-
                 }
 
                 if (usuarioLogica.ObtenerPorId(Convert.ToInt32( this.textIdentificacion.Text)) != null && UsuarioLogica.SHA1Encrypt(this.textContraseña.Text) == usuarioLogica.ObtenerPorId(Convert.ToInt32(this.textIdentificacion.Text)).Contraseña)
@@ -99,8 +94,11 @@ namespace appProyecto
          //   frm.ShowDialog();
         }
 
-
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuAdministrador frm = new MenuAdministrador();
+            frm.ShowDialog();
         }
+    }
     }
 
