@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using CapaDatos;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace CapaLogica
     public class ProfesorLogica
     {
 
-        private MateriaDatos datos = new MateriaDatos();
+        private ProfesorDatos datos = new ProfesorDatos();
 
         public void guardar(Profesor cat)
         {
@@ -25,11 +26,11 @@ namespace CapaLogica
                 datos.Actualizar(cat);
         }
 
-        public List<Materia> SeleccionarTodos()
+        public List<Profesor> SeleccionarTodos()
         {
             return datos.SeleccionarTodos();
         }
-        public Materia SeleccionarMateriaPorId(int Id)
+        public Profesor SeleccionarMateriaPorId(int Id)
         {
             return datos.SeleccionarPorID(Id);
         }
