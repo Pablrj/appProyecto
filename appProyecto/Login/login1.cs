@@ -34,16 +34,16 @@ namespace appProyecto
           
         }
 
-        public Usuario ObtenerUsuario()
+        public int ObtenerUsuario()
         {
-            List<Usuario> lista = new CapaLogica.UsuarioLogica().ObtenerTodos();
+            List<Usuario> lista = usuarioLogica.ObtenerTodos();
 
-            Usuario usuario = null;
+            int usuario = 0;
 
             foreach(Usuario usu in lista)
             {
-                if(usu.ID == Convert.ToInt32(textIdentificacion.Text) && usu.Contraseña.Equals(textContraseña.Text.Trim())){
-                    usuario = usu;
+                if(usu.ID == Convert.ToInt32(textIdentificacion.Text) && usu.Contraseña.Trim().Equals(textContraseña.Text)){
+                    usuario = usu.IDTipoUsuario.ID;
                 }
             }
             return usuario;
@@ -61,33 +61,29 @@ namespace appProyecto
                 {
                     throw new Exception("Debe digita la contraseña");
                 }
-
-                if (ObtenerUsuario()==null)
-                {
-                    
-                    if (ObtenerUsuario().IDTipoUsuario.ID==1)
+                
+                    if (ObtenerUsuario() == 1)
                     {
                         MenuAdministrador frm = new MenuAdministrador();
                         frm.ShowDialog();
                     }
-                    if (ObtenerUsuario().IDTipoUsuario.ID == 2)
+                    if (ObtenerUsuario() == 2)
                     {
                         MenuProfesor frm = new MenuProfesor();
                         frm.ShowDialog();
                     }
-                    if (ObtenerUsuario().IDTipoUsuario.ID == 3)
+                    if (ObtenerUsuario() == 3)
                     {
                         MenuEstudiante frm = new MenuEstudiante();
                         frm.ShowDialog();
                     }
-                    if (ObtenerUsuario().IDTipoUsuario.ID == 4)
+                    if (ObtenerUsuario()== 4)
                     {
                         MenuPadre frm = new MenuPadre();
                         frm.ShowDialog();
                     }
                     this.textContraseña.Text = "";
                     this.textIdentificacion.Text = "";
-
                 
                
             }
@@ -100,17 +96,9 @@ namespace appProyecto
 
         }
 
-        private void linkLblNuevaCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-           // FrmCrearUsuario frm = new FrmCrearUsuario();
-         //   frm.ShowDialog();
-        }
+       
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MenuAdministrador frm = new MenuAdministrador();
-            frm.ShowDialog();
-        }
+       
     }
     }
 

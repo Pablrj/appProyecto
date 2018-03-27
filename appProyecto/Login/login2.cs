@@ -96,12 +96,13 @@ namespace appProyecto
                         {
                             ID = Convert.ToInt32(this.textIdentificacion.Text),
                             NombreCompleto = this.textNombreCompleto.Text,
-                            Genero = this.comboGenero.ToString(),
+                            Genero = this.comboGenero.SelectedItem.ToString(),
                             IDNivel = (Nivel)this.comboNivel.SelectedItem,
-                            IDTipoUsuario = new TipoUsuario() {ID=3,Descripcion="Estudiante"},
+                            IDTipoUsuario = new TipoUsuario() { ID = 3, Descripcion = "Estudiante" },
                             FechaNacimiento = (DateTime)dateTimePicker1.Value,
                             CorreoPadre = this.textCorreoPadre.Text,
-                            TelefonoPadre = this.textTelefonoPadre.Text,                                                   
+                            TelefonoPadre = this.textTelefonoPadre.Text,
+                            Contraseña = this.textContraseña.Text,                                               
                         };
                         QrEncoder qrEncoder = new QrEncoder(ErrorCorrectionLevel.H);
                         QrCode qrCode = new QrCode();
@@ -111,7 +112,7 @@ namespace appProyecto
                         renderer.WriteToStream(qrCode.Matrix, ImageFormat.Png, ms);
                         var imageTemporal = new Bitmap(ms);
                         var imagen = new Bitmap(imageTemporal, new Size(new Point(145, 125)));
-                       // QR.BackgroundImage = imagen;
+                      
 
                         usuario.QR=imagen.ToString();
                         if (this.textContraseña.Text != this.textRepeContraEstu.Text)
@@ -119,6 +120,7 @@ namespace appProyecto
                             MessageBox.Show("Las contraseñs deben de ser iguales");
                             return;
                         }
+                        
                         usuarioLogica.Guardar(usuario);
                         login1 lo = new login1();
                         lo.Show();
@@ -170,13 +172,15 @@ namespace appProyecto
                             CorreoPadre = "",
                             TelefonoPadre = "",
                             QR = "",
-                            Estado=false,                          
+                            Estado=false,   
+                            Contraseña=this.textContrasennaPadre.Text,                       
                         };
                         if (this.textContrasennaPadre.Text != this.textRepetirContraPadre.Text)
                         {
                             MessageBox.Show("Las contraseñs deben de ser iguales");
                             return;
                         }
+                        
                         usuarioLogica.Guardar(usuario);
                         login1 lo = new login1();
                         lo.Show();
@@ -232,6 +236,7 @@ namespace appProyecto
                             TelefonoPadre = "",
                             QR = "",
                             Estado = false,
+                            Contraseña=this.textcContrasennaProfesor.Text,
 
                         };
                         if (this.textcContrasennaProfesor.Text != this.textRepetirContra.Text)
@@ -239,6 +244,7 @@ namespace appProyecto
                             MessageBox.Show("Las contraseñs deben de ser iguales");
                             return;
                         }
+                        
                         usuarioLogica.Guardar(usuario);
                         login1 lo = new login1();
                         lo.Show();

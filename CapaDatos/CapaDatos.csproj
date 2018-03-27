@@ -55,6 +55,7 @@
     <Compile Include="HorarioDatos.cs" />
     <Compile Include="MateriaDatos.cs" />
     <Compile Include="NivelDatos.cs" />
+    <Compile Include="ProfesorDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoUsuarioDatos.cs" />
     <Compile Include="UsuarioDatos.cs" />

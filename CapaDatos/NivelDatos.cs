@@ -53,7 +53,7 @@ namespace CapaDatos
                 //Paso 2:
                 string sql = "Sp_Nivel_SelectRow";
                 //Paso 3:
-                SqlCommand comando = new SqlCommand(sql);
+                SqlCommand comando = new SqlCommand(sql,conexion);
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@id", id);
                 //Paso 4: ejecutar el comando
@@ -73,6 +73,10 @@ namespace CapaDatos
             catch (Exception)
             {
                 throw;
+            }
+            finally
+            {
+                conexion.Close();
             }
         }
     }

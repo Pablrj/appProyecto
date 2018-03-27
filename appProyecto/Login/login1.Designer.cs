@@ -35,7 +35,6 @@
             this.butCancelar = new System.Windows.Forms.Button();
             this.butRegistrarse = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.textIdentificacion = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
@@ -65,14 +64,14 @@
             this.textContraseña.Name = "textContraseña";
             this.textContraseña.PasswordChar = '*';
             this.textContraseña.Size = new System.Drawing.Size(136, 20);
-            this.textContraseña.TabIndex = 3;
+            this.textContraseña.TabIndex = 2;
             // 
             // butAceptar
             // 
             this.butAceptar.Location = new System.Drawing.Point(48, 175);
             this.butAceptar.Name = "butAceptar";
             this.butAceptar.Size = new System.Drawing.Size(145, 23);
-            this.butAceptar.TabIndex = 4;
+            this.butAceptar.TabIndex = 3;
             this.butAceptar.Text = "Aceptar";
             this.butAceptar.UseVisualStyleBackColor = true;
             this.butAceptar.Click += new System.EventHandler(this.butAceptar_Click);
@@ -82,7 +81,7 @@
             this.butCancelar.Location = new System.Drawing.Point(209, 175);
             this.butCancelar.Name = "butCancelar";
             this.butCancelar.Size = new System.Drawing.Size(145, 23);
-            this.butCancelar.TabIndex = 5;
+            this.butCancelar.TabIndex = 4;
             this.butCancelar.Text = "Cancelar";
             this.butCancelar.UseVisualStyleBackColor = true;
             this.butCancelar.Click += new System.EventHandler(this.butCancelar_Click);
@@ -92,7 +91,7 @@
             this.butRegistrarse.Location = new System.Drawing.Point(164, 216);
             this.butRegistrarse.Name = "butRegistrarse";
             this.butRegistrarse.Size = new System.Drawing.Size(95, 23);
-            this.butRegistrarse.TabIndex = 6;
+            this.butRegistrarse.TabIndex = 5;
             this.butRegistrarse.Text = "Registrarse";
             this.butRegistrarse.UseVisualStyleBackColor = true;
             this.butRegistrarse.Click += new System.EventHandler(this.butRegistrarse_Click);
@@ -107,23 +106,13 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Iniciar Seccion:";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(60, 215);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // textIdentificacion
             // 
             this.textIdentificacion.Location = new System.Drawing.Point(195, 76);
-            this.textIdentificacion.Mask = "00000000";
+            this.textIdentificacion.Mask = "999999999";
             this.textIdentificacion.Name = "textIdentificacion";
             this.textIdentificacion.Size = new System.Drawing.Size(136, 20);
-            this.textIdentificacion.TabIndex = 9;
+            this.textIdentificacion.TabIndex = 1;
             // 
             // login1
             // 
@@ -132,7 +121,6 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(419, 298);
             this.Controls.Add(this.textIdentificacion);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.butRegistrarse);
             this.Controls.Add(this.butCancelar);
@@ -156,7 +144,6 @@
         private System.Windows.Forms.Button butCancelar;
         private System.Windows.Forms.Button butRegistrarse;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MaskedTextBox textIdentificacion;
     }
 }

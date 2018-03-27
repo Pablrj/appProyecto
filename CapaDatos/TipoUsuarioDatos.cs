@@ -54,7 +54,7 @@ namespace CapaDatos
                 //Paso 2:
                 string sql = "Sp_TipoUsuario_SelectRow";
                 //Paso 3:
-                SqlCommand comando = new SqlCommand(sql);
+                SqlCommand comando = new SqlCommand(sql,conexion);
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@id", id);
                 //Paso 4: ejecutar el comando
@@ -65,7 +65,7 @@ namespace CapaDatos
                     TipoUsuario tipo = new TipoUsuario()
                     {
                         ID = (int)reader["ID"],
-                        Descripcion = reader["Nombre"].ToString()
+                        Descripcion = reader["Descripcion"].ToString()
                     };
                     return tipo;//retorna la categoria encontrada
                 }
@@ -74,6 +74,10 @@ namespace CapaDatos
             catch (Exception)
             {
                 throw;
+            }
+            finally
+            {
+                conexion.Close();
             }
         }
     }
