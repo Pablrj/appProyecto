@@ -1,6 +1,6 @@
 ﻿namespace appProyecto.Mantenimientos
 {
-    partial class frmMatProf
+    partial class MantenimientoGrupoEstudiante
     {
         /// <summary>
         /// Required designer variable.
@@ -43,12 +43,12 @@
             this.groupBox2.Controls.Add(this.btnBorrar);
             this.groupBox2.Controls.Add(this.lstMat);
             this.groupBox2.Controls.Add(this.btnAgregar);
-            this.groupBox2.Location = new System.Drawing.Point(199, 12);
+            this.groupBox2.Location = new System.Drawing.Point(260, 16);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(187, 229);
-            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Materias";
+            this.groupBox2.Text = "Estudiantes";
             // 
             // btnBorrar
             // 
@@ -85,12 +85,12 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lstProf);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(73, 16);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(181, 229);
-            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Profesores";
+            this.groupBox1.Text = "Grupos";
             // 
             // lstProf
             // 
@@ -101,16 +101,16 @@
             this.lstProf.TabIndex = 5;
             this.lstProf.SelectedIndexChanged += new System.EventHandler(this.lstProf_SelectedIndexChanged);
             // 
-            // frmMatProf
+            // MantenimientoGrupoEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 272);
+            this.ClientSize = new System.Drawing.Size(520, 261);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmMatProf";
-            this.Text = "frmMatProf";
-            this.Load += new System.EventHandler(this.frmMatProf_Load);
+            this.Name = "MantenimientoGrupoEstudiante";
+            this.Text = "MantenimientoGrupoEstudiante";
+            this.Load += new System.EventHandler(this.MantenimientoGrupoEstudiante_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

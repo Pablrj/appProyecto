@@ -31,7 +31,7 @@ namespace CapaDatos
                     TipoUsuario tipo = new TipoUsuario()
                     {
                         ID = (int)reader["ID"],
-                        Descripcion = reader["Nombre"].ToString()
+                        Descripcion = reader["Nombre"].ToString(),
                     };
                     lista.Add(tipo);
                 }

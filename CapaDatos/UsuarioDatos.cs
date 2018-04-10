@@ -145,6 +145,200 @@ namespace CapaDatos
             return lista;
         }
 
+        public List<Usuario> SeleccionarTodosProfesor()
+        {
+            List<Usuario> lista = new List<Usuario>();
+            //Paso 1:
+            SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
+            try
+            {
+                conexion.Open();
+                //Paso 2:
+                string sql = "Sp_Usuario_SelectProfesores";
+                //Paso 3:
+                SqlCommand comando = new SqlCommand(sql, conexion);
+
+                comando.CommandType = CommandType.StoredProcedure;
+
+                IDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int tipo = (int)reader["IDTipoUsuario"];
+                    Usuario usuario = null;
+                    if (tipo == 1)
+                    {
+                        usuario = new Administrador();
+                        usuario.ID = Convert.ToInt32(reader["ID"].ToString());
+                        usuario.NombreCompleto = reader["NombreCompleto"].ToString();
+                        usuario.IDNivel = null;
+                        usuario.Genero = null;
+                        usuario.FechaNacimiento = DateTime.Now;
+                        usuario.CorreoPadre = null;
+                        usuario.TelefonoPadre = null;
+                        usuario.Contraseña = reader["Contraseña"].ToString();
+                        usuario.Estado = false;
+                        usuario.IDTipoUsuario = new TipoUsuarioDatos().SeleccionarporId(Convert.ToInt32(reader["idtipousuario"]));
+                        usuario.QR = null;
+                    }
+                    if (tipo == 2)
+                    {
+                        usuario = new Profesor();
+                        usuario.ID = Convert.ToInt32(reader["ID"].ToString());
+                        usuario.NombreCompleto = reader["NombreCompleto"].ToString();
+                        usuario.IDNivel = null;
+                        usuario.Genero = null;
+                        usuario.FechaNacimiento = DateTime.Now;
+                        usuario.CorreoPadre = null;
+                        usuario.TelefonoPadre = null;
+                        usuario.Contraseña = reader["Contraseña"].ToString();
+                        usuario.Estado = false;
+                        usuario.IDTipoUsuario = new TipoUsuarioDatos().SeleccionarporId(Convert.ToInt32(reader["idtipousuario"]));
+                        usuario.QR = null;
+                    }
+                    if (tipo == 3)
+                    {
+                        usuario = new Estudiante();
+                        usuario.ID = Convert.ToInt32(reader["ID"].ToString());
+                        usuario.NombreCompleto = reader["NombreCompleto"].ToString();
+                        usuario.IDNivel = new NivelDatos().SeleccionarporId(Convert.ToInt32(reader["IDNivel"]));
+                        usuario.Genero = reader["Genero"].ToString();
+                        usuario.FechaNacimiento = Convert.ToDateTime(reader["FechaNacimiento"].ToString());
+                        usuario.CorreoPadre = reader["CorreoPadre"].ToString();
+                        usuario.TelefonoPadre = reader["TelefonoPadre"].ToString();
+                        usuario.Contraseña = reader["Contraseña"].ToString();
+                        usuario.Estado = Convert.ToBoolean(reader["Estado"].ToString());
+                        usuario.IDTipoUsuario = new TipoUsuarioDatos().SeleccionarporId(Convert.ToInt32(reader["IDTipoUsuario"]));
+                        usuario.QR = reader["QR"].ToString();
+                    }
+                    if (tipo == 4)
+                    {
+                        usuario = new Padre();
+                        usuario.ID = Convert.ToInt32(reader["ID"].ToString());
+                        usuario.NombreCompleto = null;
+                        usuario.IDNivel = null;
+                        usuario.Genero = null;
+                        usuario.FechaNacimiento = DateTime.Now;
+                        usuario.CorreoPadre = null;
+                        usuario.TelefonoPadre = null;
+                        usuario.Contraseña = reader["Contraseña"].ToString();
+                        usuario.Estado = false;
+                        usuario.IDTipoUsuario = new TipoUsuarioDatos().SeleccionarporId(Convert.ToInt32(reader["idtipousuario"]));
+                        usuario.QR = null;
+                    }
+                    lista.Add(usuario);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+
+            return lista;
+        }
+
+        public List<Usuario> SeleccionarTodosEstudiantes()
+        {
+            List<Usuario> lista = new List<Usuario>();
+            //Paso 1:
+            SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
+            try
+            {
+                conexion.Open();
+                //Paso 2:
+                string sql = "Sp_Usuario_SelectEstudiantes";
+                //Paso 3:
+                SqlCommand comando = new SqlCommand(sql, conexion);
+
+                comando.CommandType = CommandType.StoredProcedure;
+
+                IDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int tipo = (int)reader["IDTipoUsuario"];
+                    Usuario usuario = null;
+                    if (tipo == 1)
+                    {
+                        usuario = new Administrador();
+                        usuario.ID = Convert.ToInt32(reader["ID"].ToString());
+                        usuario.NombreCompleto = reader["NombreCompleto"].ToString();
+                        usuario.IDNivel = null;
+                        usuario.Genero = null;
+                        usuario.FechaNacimiento = DateTime.Now;
+                        usuario.CorreoPadre = null;
+                        usuario.TelefonoPadre = null;
+                        usuario.Contraseña = reader["Contraseña"].ToString();
+                        usuario.Estado = false;
+                        usuario.IDTipoUsuario = new TipoUsuarioDatos().SeleccionarporId(Convert.ToInt32(reader["idtipousuario"]));
+                        usuario.QR = null;
+                    }
+                    if (tipo == 2)
+                    {
+                        usuario = new Profesor();
+                        usuario.ID = Convert.ToInt32(reader["ID"].ToString());
+                        usuario.NombreCompleto = reader["NombreCompleto"].ToString();
+                        usuario.IDNivel = null;
+                        usuario.Genero = null;
+                        usuario.FechaNacimiento = DateTime.Now;
+                        usuario.CorreoPadre = null;
+                        usuario.TelefonoPadre = null;
+                        usuario.Contraseña = reader["Contraseña"].ToString();
+                        usuario.Estado = false;
+                        usuario.IDTipoUsuario = new TipoUsuarioDatos().SeleccionarporId(Convert.ToInt32(reader["idtipousuario"]));
+                        usuario.QR = null;
+                    }
+                    if (tipo == 3)
+                    {
+                        usuario = new Estudiante();
+                        usuario.ID = Convert.ToInt32(reader["ID"].ToString());
+                        usuario.NombreCompleto = reader["NombreCompleto"].ToString();
+                        usuario.IDNivel = new NivelDatos().SeleccionarporId(Convert.ToInt32(reader["IDNivel"]));
+                        usuario.Genero = reader["Genero"].ToString();
+                        usuario.FechaNacimiento = Convert.ToDateTime(reader["FechaNacimiento"].ToString());
+                        usuario.CorreoPadre = reader["CorreoPadre"].ToString();
+                        usuario.TelefonoPadre = reader["TelefonoPadre"].ToString();
+                        usuario.Contraseña = reader["Contraseña"].ToString();
+                        usuario.Estado = Convert.ToBoolean(reader["Estado"].ToString());
+                        usuario.IDTipoUsuario = new TipoUsuarioDatos().SeleccionarporId(Convert.ToInt32(reader["IDTipoUsuario"]));
+                        usuario.QR = reader["QR"].ToString();
+                    }
+                    if (tipo == 4)
+                    {
+                        usuario = new Padre();
+                        usuario.ID = Convert.ToInt32(reader["ID"].ToString());
+                        usuario.NombreCompleto = null;
+                        usuario.IDNivel = null;
+                        usuario.Genero = null;
+                        usuario.FechaNacimiento = DateTime.Now;
+                        usuario.CorreoPadre = null;
+                        usuario.TelefonoPadre = null;
+                        usuario.Contraseña = reader["Contraseña"].ToString();
+                        usuario.Estado = false;
+                        usuario.IDTipoUsuario = new TipoUsuarioDatos().SeleccionarporId(Convert.ToInt32(reader["idtipousuario"]));
+                        usuario.QR = null;
+                    }
+                    lista.Add(usuario);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+
+            return lista;
+        }
+
         public void Actualizar(Usuario usuario)
         {
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());

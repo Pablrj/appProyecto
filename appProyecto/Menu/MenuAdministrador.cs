@@ -1,4 +1,6 @@
-﻿using System;
+﻿using appProyecto.Mantenimientos;
+using appProyecto.Reportes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,23 +25,11 @@ namespace appProyecto
             man.Show();
         }
 
-        private void butEstudiante_Click(object sender, EventArgs e)
-        {
-            MantenimientoEstudiante es = new MantenimientoEstudiante();
-            es.Show();
-        }
+      
 
-        private void butProfesor_Click(object sender, EventArgs e)
-        {
-            MantenimientoProfesor pro = new MantenimientoProfesor();
-            pro.Show();
-        }
+      
 
-        private void butPadre_Click(object sender, EventArgs e)
-        {
-            MantenimientoPadre pa = new MantenimientoPadre();
-            pa.Show();
-        }
+       
 
         private void butGrupo_Click(object sender, EventArgs e)
         {
@@ -55,7 +45,41 @@ namespace appProyecto
 
         private void butHorario_Click(object sender, EventArgs e)
         {
+            MantenimientoHorario a = new MantenimientoHorario();
+            a.Show();
+        }
 
+        private void butMateriaProfesor_Click(object sender, EventArgs e)
+        {
+            frmMatProf a = new frmMatProf();
+            a.Show();
+        }
+
+        private void MenuAdministrador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void butAceptar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void butNiveles_Click(object sender, EventArgs e)
+        {
+            frmReporteNivel r = new frmReporteNivel();
+            r.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MantenimientoGrupoEstudiante f = new MantenimientoGrupoEstudiante();
+            f.Show();
         }
     }
 }

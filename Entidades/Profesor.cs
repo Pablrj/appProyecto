@@ -17,12 +17,12 @@ namespace Entidades
         public override TipoUsuario IDTipoUsuario { get; set; } 
         public override string NombreCompleto { get; set; }
         public override string TelefonoPadre { get; set; }
-
         public override bool Estado { get; set; }
-
         public override string QR { get; set; }
-
-        public List<Materia> listaMateria { get; set; }
+        public override string ToString()
+        {
+            return this.NombreCompleto;
+        }
 
     }
 }

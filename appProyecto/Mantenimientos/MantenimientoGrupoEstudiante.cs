@@ -12,31 +12,32 @@ using System.Windows.Forms;
 
 namespace appProyecto.Mantenimientos
 {
-    public partial class frmMatProf : Form
+    public partial class MantenimientoGrupoEstudiante : Form
     {
-        UsuarioLogica Logica = null;
-        MatProfLogica Logica_MatProf = null;
-        public frmMatProf()
+        GrupoLogica Logica = null;
+        GrupoEstudianteLogica Logica_MatProf = null;
+
+        public MantenimientoGrupoEstudiante()
         {
+            Logica = new GrupoLogica();
+            Logica_MatProf = new GrupoEstudianteLogica();
             InitializeComponent();
-            Logica = new UsuarioLogica();
-            Logica_MatProf = new MatProfLogica();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
             {
-                Usuario usuario = (Usuario)lstProf.SelectedItem;
-                Mantenimientos.frmBuscarMat ofrm = new frmBuscarMat();
+                Grupo usuario = (Grupo)lstProf.SelectedItem;
+                Mantenimientos.frmBuscarEstudiantes ofrm = new frmBuscarEstudiantes();
                 ofrm.ShowDialog();
 
-                Materia mat = ofrm.Mat;
+                Usuario mat = ofrm.Mat;
 
                 if (usuario != null && mat != null)
                 {
 
-                    Logica_MatProf.guardar(usuario, mat);
+                    Logica_MatProf.guardar(mat, usuario);
 
                     Refrescar();
                     MessageBox.Show("Se Agrego un Autor al Libro seleccionado");
@@ -49,13 +50,12 @@ namespace appProyecto.Mantenimientos
                 throw;
             }
         }
-
         private void Refrescar()
         {
             try
             {
                 lstProf.DisplayMember = "titulo";
-                lstProf.DataSource = Logica.ObtenerTodosProfesores();
+                lstProf.DataSource = Logica.SeleccionarTodos();
             }
             catch (Exception)
             {
@@ -64,19 +64,19 @@ namespace appProyecto.Mantenimientos
             }
         }
 
-        private void frmMatProf_Load(object sender, EventArgs e)
+        private void MantenimientoGrupoEstudiante_Load(object sender, EventArgs e)
         {
-            Refrescar();
+            this.Refrescar();
         }
 
         private void lstProf_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstProf.SelectedItem != null)
             {
-                lstProf.DisplayMember = "Nombre";
-                Usuario ususario = (Usuario)lstProf.SelectedItem;
+                lstProf.DisplayMember = "ID";
+                Grupo grupo = (Grupo)lstProf.SelectedItem;
 
-                lstMat.DataSource = Logica_MatProf.SeleccionarTodos(ususario.ID);
+                lstMat.DataSource = Logica_MatProf.SeleccionarTodos(grupo.ID);
 
             }
         }
@@ -85,23 +85,18 @@ namespace appProyecto.Mantenimientos
         {
             try
             {
-                Usuario enUsus = (Usuario)lstProf.SelectedItem;
-                Materia mate = (Materia)lstMat.SelectedItem;
+                Usuario enUsus = (Usuario)lstMat.SelectedItem;
+                Grupo mate = (Grupo)lstProf.SelectedItem;
                 Logica_MatProf.Eliminar(enUsus, mate);
                 Refrescar();
-                MessageBox.Show("Se Elimono un Materia al profesor seleccionado");
+                MessageBox.Show("Se Elimino un Estudiante al Grupo seleccionado");
             }
             catch (Exception)
             {
 
                 throw;
             }
-            
-
-
         }
+
     }
-
-
 }
-

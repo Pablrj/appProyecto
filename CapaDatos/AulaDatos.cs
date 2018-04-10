@@ -10,7 +10,7 @@ namespace CapaDatos
 {
    public  class AulaDatos
     {
-        public void Insertar(Aula mat)
+        public  void Insertar(Aula mat)
         {
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -130,7 +130,7 @@ namespace CapaDatos
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
-        public Aula SeleccionarPorID(int Id)
+        public  Aula SeleccionarPorID(int Id)
         {
             Aula mat = null;
 

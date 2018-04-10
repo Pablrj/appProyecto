@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class MatProfDatos
+    public class GrupoEstudianteDatos
     {
-        public void Insertar(Usuario usuario, Materia mat)
+        public void Insertar(Grupo usuario, Usuario mat)
         {
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -21,14 +21,14 @@ namespace CapaDatos
                 //Abrir la conexion
                 conexion.Open();
                 //Paso 2: Instruccion SP
-                string sql = "Sp_MatPro_Insert";
+                string sql = "Sp_GrupoEstudiante_Insert";
 
                 //Paso 3: Comando para ejecutar el paso 2
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
-                comando.Parameters.AddWithValue("@ID_Prof", usuario.ID);
-                comando.Parameters.AddWithValue("@ID_Mat", mat.ID);
+                comando.Parameters.AddWithValue("@IDGrupo", usuario.ID);
+                comando.Parameters.AddWithValue("@iDUsuarioEstudiante", mat.ID);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -50,7 +50,7 @@ namespace CapaDatos
         /// en la BD por el id 
         /// </summary>
         /// <param name="id"></param>
-        public void Eliminar(Usuario usuario, Materia mat)
+        public void Eliminar(Grupo usuario, Usuario mat)
         {
 
             //Paso 1: conexion BD
@@ -61,14 +61,14 @@ namespace CapaDatos
                 //Abrir la conexion
                 conexion.Open();
                 //Paso 2: Instruccion
-                string sql = "Sp_MatProf_DeleteRow";
+                string sql = "Sp_GrupoEstudiante_DeleteRow";
 
                 //Paso 3: Comando para ejecutar el paso 2
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
-                comando.Parameters.AddWithValue("@ID_Prof", usuario.ID);
-                comando.Parameters.AddWithValue("@ID_Mat", mat.ID);
+                comando.Parameters.AddWithValue("@IDGrupo", usuario.ID);
+                comando.Parameters.AddWithValue("@iDUsuarioEstudiante", mat.ID);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -87,10 +87,10 @@ namespace CapaDatos
         }
 
 
-        public List<Materia> SeleccionarMatPorProf(int idProf)
+        public List<Usuario> SeleccionarGrupoEstudiante(int idProf)
         {
-            Materia mat = null;
-            List<Materia> lista = new List<Materia>();
+            Usuario mat = null;
+            List<Usuario> lista = new List<Usuario>();
 
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -100,7 +100,7 @@ namespace CapaDatos
                 //Abrir la conexion
                 conexion.Open();
                 //Paso 2: Instruccion
-                string sql = "SP_Mat_Por_ProfID";
+                string sql = "SP_Grupo_Por_EstudianteID";
 
                 //Paso 3: Comando para ejecutar el paso 2
                 SqlCommand comando = new SqlCommand(sql, conexion);
@@ -113,10 +113,11 @@ namespace CapaDatos
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-                    mat = new Materia
+                    mat = new Estudiante
                     {
                         ID = Convert.ToInt32(reader["Id"]),
-                        Nombre = reader["Nombre"].ToString()
+                        NombreCompleto= reader["NombreCompleto"].ToString()
+                       
                     };
 
                     lista.Add(mat);

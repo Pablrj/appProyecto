@@ -21,8 +21,11 @@ namespace Entidades
 
         public override string QR { get; set; }
 
+        public override string ToString()
+        {
+            return this.NombreCompleto;
+        }
 
-       
 
     }
 }

@@ -16,7 +16,7 @@ namespace appProyecto
     {
         public login1()
         {
-            InitializeComponent();
+            InitializeComponent();     
         }
 
         UsuarioLogica usuarioLogica = new UsuarioLogica();
@@ -48,6 +48,7 @@ namespace appProyecto
             }
             return usuario;
         }
+        
 
         private void butAceptar_Click(object sender, EventArgs e)
         {
@@ -96,9 +97,16 @@ namespace appProyecto
 
         }
 
-       
+        private void login1_Load(object sender, EventArgs e)
+        {
+            
+        }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Mantenimientos.MantenimientoGrupoEstudiante f = new Mantenimientos.MantenimientoGrupoEstudiante();
+            f.Show();
+        }
     }
-    }
+}
 

@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace CapaLogica
 {
-    public class ProfesorLogica
+   public  class GrupoLogica
     {
+        private GrupoDatos datos = new GrupoDatos();
 
-        private ProfesorDatos datos = new ProfesorDatos();
 
-        public void guardar(Profesor cat)
+        public void guardar(Grupo cat)
         {
-            if (String.IsNullOrWhiteSpace(cat.NombreCompleto))
+            if (String.IsNullOrWhiteSpace(cat.ID.ToString()))
             {
                 throw new ApplicationException("El nombre es requerido");
             }
@@ -26,11 +26,11 @@ namespace CapaLogica
                 datos.Actualizar(cat);
         }
 
-        public List<Profesor> SeleccionarTodos()
+        public List<Grupo> SeleccionarTodos()
         {
             return datos.SeleccionarTodos();
         }
-        public Profesor SeleccionarMateriaPorId(int Id)
+        public Grupo SeleccionarMateriaPorId(int Id)
         {
             return datos.SeleccionarPorID(Id);
         }

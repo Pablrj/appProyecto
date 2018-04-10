@@ -28,7 +28,7 @@ namespace CapaDatos
 
                 //Paso 4: Enviar los parametros
                 comando.Parameters.AddWithValue("@Id", mat.ID);
-                comando.Parameters.AddWithValue("@Horario", mat.horario);
+                comando.Parameters.AddWithValue("@Hora", mat.horario);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -67,7 +67,7 @@ namespace CapaDatos
 
                 //Paso 4: Enviar los parametros
                 comando.Parameters.AddWithValue("@Id", mat.ID);
-                comando.Parameters.AddWithValue("@Horario", mat.horario);
+                comando.Parameters.AddWithValue("@Hora", mat.horario);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -160,7 +160,7 @@ namespace CapaDatos
                     mat = new Horario
                     {
                         ID = Convert.ToInt32(reader["Id"]),
-                        horario = Convert.ToDateTime(reader["horario"].ToString())
+                        horario = Convert.ToDateTime(reader["hora"].ToString())
                     };
 
 
@@ -210,7 +210,7 @@ namespace CapaDatos
                     Horario cat = new Horario
                     {
                         ID = Convert.ToInt32(reader["Id"]),
-                        horario = Convert.ToDateTime(reader["horario"].ToString())
+                        horario = DateTime.Parse(reader["hora"].ToString())
                     };
 
                     lista.Add(cat);

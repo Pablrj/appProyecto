@@ -8,14 +8,17 @@ namespace Entidades
 {
    public  class Grupo
     {
-        public int ID { get; set; }
-        public int IDUsuarioProfesor { get; set; }
-        public Usuario Profesor { get; set; }//IDUsuarioProfesor
-        public int IDHorario { get; set; }
-        public Horario Horario { get; set; }//IDHorario
-        public int IDAula { get; set; }
-        public Aula Aula { get; set; }//IDAula
+        public int ID { get; set; }      
+        public Usuario IDUsuarioProfesor { get; set; }
+        public Horario IDHorario { get; set; }        
+        public Aula IDAula { get; set; }       
         public bool Guia { get; set; }
+        public int cantidad { get; set; }
+
+        public override string ToString()
+        {
+            return ID.ToString();
+        }
 
     }
 }

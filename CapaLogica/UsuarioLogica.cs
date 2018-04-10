@@ -35,6 +35,15 @@ namespace CapaLogica
         {
             return datos.SeleccionarTodos();
         }
+        public List<Usuario> ObtenerTodosProfesores()
+        {
+            return datos.SeleccionarTodosProfesor();
+        }
+
+        public List<Usuario> ObtenerTodosEstudiantes()
+        {
+            return datos.SeleccionarTodosEstudiantes();
+        }
 
         public void Eliminar(int id)
         {

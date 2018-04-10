@@ -122,11 +122,12 @@ namespace appProyecto
                         }
                         
                         usuarioLogica.Guardar(usuario);
+                        MessageBox.Show("Usuario creado con exito");
+                        this.Dispose();
                         login1 lo = new login1();
                         lo.Show();
                         lo.Visible = true;
-                        MessageBox.Show("Usuario creado con exito");
-                        this.Dispose();
+                        
                     }
                     else
                     {
@@ -168,7 +169,7 @@ namespace appProyecto
                             IDTipoUsuario = new TipoUsuario() { ID = 4, Descripcion = "Padre" },
                             FechaNacimiento = (DateTime)dateTimePicker1.Value,
                             Genero = "",
-                            IDNivel = (Nivel)this.comboNivel.SelectedItem,
+                            IDNivel = null,
                             CorreoPadre = "",
                             TelefonoPadre = "",
                             QR = "",

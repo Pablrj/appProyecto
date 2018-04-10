@@ -33,5 +33,26 @@ namespace appProyecto.Properties {
                 return ((string)(this["Conexion"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=ProyectoProgra3DB;Persist Security Info=True;User I" +
+            "D=pablo;Password=123456")]
+        public string ProyectoProgra3DBConnectionString {
+            get {
+                return ((string)(this["ProyectoProgra3DBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=ProyectoProgra3DB;Integrated Security=True")]
+        public string ProyectoProgra3DBConnectionString1 {
+            get {
+                return ((string)(this["ProyectoProgra3DBConnectionString1"]));
+            }
+        }
     }
 }

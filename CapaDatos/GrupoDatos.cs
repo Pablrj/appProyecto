@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class ProfesorDatos
+    public class GrupoDatos
     {
         /// <summary>
         /// Insertamos un Autor en la Tabla
         /// de la BD
         /// </summary>
         /// <param name="mat"></param>
-        public void Insertar(Profesor mat)
+        public void Insertar(Grupo mat)
         {
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -26,14 +26,19 @@ namespace CapaDatos
                 //Abrir la conexion
                 conexion.Open();
                 //Paso 2: Instruccion SP
-                string sql = "Sp_Usuario_Insert";
+                string sql = "Sp_Grupo_Insert";
 
                 //Paso 3: Comando para ejecutar el paso 2
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
                 comando.Parameters.AddWithValue("@Id", mat.ID);
-                comando.Parameters.AddWithValue("@NombreCompleto", mat.NombreCompleto);
+                comando.Parameters.AddWithValue("@IDUsuarioProfesor", mat.IDUsuarioProfesor.ID);
+                comando.Parameters.AddWithValue("@IDHorario", mat.IDHorario.ID);
+                comando.Parameters.AddWithValue("@IDAula", mat.IDAula.ID);
+                comando.Parameters.AddWithValue("@Guia", mat.Guia);
+                comando.Parameters.AddWithValue("@Cantidad", mat.cantidad);
+
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -55,7 +60,7 @@ namespace CapaDatos
         /// en la BD
         /// </summary>
         /// <param name="mat"></param>
-        public void Actualizar(Profesor mat)
+        public void Actualizar(Grupo mat)
         {
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -65,14 +70,18 @@ namespace CapaDatos
                 //Abrir la conexion
                 conexion.Open();
                 //Paso 2: Instruccion
-                string sql = "Sp_Usuario_Update";
+                string sql = "Sp_Grupo_Update";
 
                 //Paso 3: Comando para ejecutar el paso 2
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
                 comando.Parameters.AddWithValue("@Id", mat.ID);
-                comando.Parameters.AddWithValue("@NombreCompleto", mat.NombreCompleto);
+                comando.Parameters.AddWithValue("@IDUsuarioProfesor", mat.IDUsuarioProfesor.ID);
+                comando.Parameters.AddWithValue("@IDHorario", mat.IDHorario.ID);
+                comando.Parameters.AddWithValue("@IDAula", mat.IDAula.ID);
+                comando.Parameters.AddWithValue("@Guia", mat.Guia);
+                comando.Parameters.AddWithValue("@Cantidad", mat.cantidad);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -105,7 +114,7 @@ namespace CapaDatos
                 //Abrir la conexion
                 conexion.Open();
                 //Paso 2: Instruccion
-                string sql = "Sp_Usuario_DeleteRow";
+                string sql = "Sp_Grupo_DeleteRow";
 
                 //Paso 3: Comando para ejecutar el paso 2
                 SqlCommand comando = new SqlCommand(sql, conexion);
@@ -135,9 +144,9 @@ namespace CapaDatos
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
-        public Profesor SeleccionarPorID(int Id)
+        public Grupo SeleccionarPorID(int Id)
         {
-            Profesor mat = null;
+            Grupo mat = null;
 
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -147,7 +156,7 @@ namespace CapaDatos
                 //Abrir la conexion
                 conexion.Open();
                 //Paso 2: Instruccion
-                string sql = "Sp_Usuario_SelectRow";
+                string sql = "Sp_Grupo_SelectRow";
 
                 //Paso 3: Comando para ejecutar el paso 2
                 SqlCommand comando = new SqlCommand(sql, conexion);
@@ -162,10 +171,16 @@ namespace CapaDatos
                 while (reader.Read())
                 {
 
-                    mat = new Profesor
+                    mat = new Grupo
                     {
-                        ID = Convert.ToInt32(reader["Id"]),
-                        NombreCompleto = reader["NombreCompleto"].ToString()
+                        ID = Convert.ToInt32(reader["ID"]),
+                        IDUsuarioProfesor =new UsuarioDatos().SeleccionarporId(Convert.ToInt32( reader["idUsuarioProfesor"])),
+                        IDHorario=new HorarioDatos().SeleccionarPorID( Convert.ToInt32(reader["IDHorario"])),
+                        cantidad=Convert.ToInt32( reader["Cantidad"].ToString()),
+                        IDAula=new AulaDatos().SeleccionarPorID(Convert.ToInt32(reader["IDAula"])),
+                        Guia= Convert.ToBoolean(reader["Guia"])
+
+
                     };
 
 
@@ -188,9 +203,9 @@ namespace CapaDatos
         /// que se encuentran en la BD
         /// </summary>
         /// <returns></returns>
-        public List<Profesor> SeleccionarTodos()
+        public List<Grupo> SeleccionarTodos()
         {
-            List<Profesor> lista = new List<Profesor>();
+            List<Grupo> lista = new List<Grupo>();
 
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -200,7 +215,7 @@ namespace CapaDatos
                 //Abrir la conexion
                 conexion.Open();
                 //Paso 2: Instruccion
-                string sql = "Sp_Usuario_SelectAll";
+                string sql = "Sp_Grupo_SelectAll";
 
                 //Paso 3: Comando para ejecutar el paso 2
                 SqlCommand comando = new SqlCommand(sql, conexion);
@@ -212,10 +227,14 @@ namespace CapaDatos
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-                    Profesor cat = new Profesor
+                    Grupo cat = new Grupo
                     {
-                        ID = Convert.ToInt32(reader["Id"]),
-                        NombreCompleto = reader["NombreCompleto"].ToString()
+                        ID = Convert.ToInt32(reader["ID"]),
+                        IDUsuarioProfesor = new UsuarioDatos().SeleccionarporId(Convert.ToInt32(reader["idUsuarioProfesor"])),
+                        IDHorario = new HorarioDatos().SeleccionarPorID(Convert.ToInt32(reader["IDHorario"])),
+                        cantidad = Convert.ToInt32(reader["Cantidad"].ToString()),
+                        IDAula = new AulaDatos().SeleccionarPorID(Convert.ToInt32(reader["IDAula"])),
+                        Guia = Convert.ToBoolean(reader["Guia"])
                     };
 
                     lista.Add(cat);
@@ -232,8 +251,6 @@ namespace CapaDatos
             }
 
             return lista;
-
-
         }
     }
 }

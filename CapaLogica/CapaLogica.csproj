@@ -36,6 +36,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BarcodeLib, Version=1.1.0.0, Culture=neutral, PublicKeyToken=5f09bda868cc39e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.1.1.0.0\lib\net20\BarcodeLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,11 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AulaLogica.cs" />
+    <Compile Include="GrupoEstudianteLogica.cs" />
+    <Compile Include="GrupoLogica.cs" />
     <Compile Include="HorarioLogica.cs" />
     <Compile Include="MateriaLogica.cs" />
     <Compile Include="MatProfLogica.cs" />
     <Compile Include="NivelLogica.cs" />
-    <Compile Include="ProfesorLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoUsuarioLogica.cs" />
     <Compile Include="UsuarioLogica.cs" />
@@ -67,6 +72,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

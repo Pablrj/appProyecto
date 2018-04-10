@@ -36,6 +36,10 @@
     <StartupObject>appProyecto.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BarcodeLib, Version=1.1.0.0, Culture=neutral, PublicKeyToken=5f09bda868cc39e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.1.1.0.0\lib\net20\BarcodeLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Gma.QrCodeNet.0.4.1.2\lib\net40\Gma.QrCodeNet.Encoding.dll</HintPath>
       <Private>True</Private>
@@ -44,8 +48,11 @@
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,6 +77,12 @@
       <DependentUpon>login1.cs</DependentUpon>
     </Compile>
     <Compile Include="LogManager.cs" />
+    <Compile Include="Mantenimientos\frmBuscarEstudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmBuscarEstudiantes.Designer.cs">
+      <DependentUpon>frmBuscarEstudiantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\frmBuscarMat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,17 +101,17 @@
     <Compile Include="Mantenimientos\MantenimientoAula.Designer.cs">
       <DependentUpon>MantenimientoAula.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimientos\MantenimientoEstudiante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimientos\MantenimientoEstudiante.Designer.cs">
-      <DependentUpon>MantenimientoEstudiante.cs</DependentUpon>
-    </Compile>
     <Compile Include="Mantenimientos\MantenimientoGrupo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mantenimientos\MantenimientoGrupo.Designer.cs">
       <DependentUpon>MantenimientoGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\MantenimientoGrupoEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\MantenimientoGrupoEstudiante.Designer.cs">
+      <DependentUpon>MantenimientoGrupoEstudiante.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\MantenimientoHorario.cs">
       <SubType>Form</SubType>
@@ -111,18 +124,6 @@
     </Compile>
     <Compile Include="Mantenimientos\MantenimientoMateria.Designer.cs">
       <DependentUpon>MantenimientoMateria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimientos\MantenimientoPadre.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimientos\MantenimientoPadre.Designer.cs">
-      <DependentUpon>MantenimientoPadre.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimientos\MantenimientoProfesor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimientos\MantenimientoProfesor.Designer.cs">
-      <DependentUpon>MantenimientoProfesor.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu\MenuAdministrador.cs">
       <SubType>Form</SubType>
@@ -150,11 +151,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProyectoProgra3DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoProgra3DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReporteNivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReporteNivel.Designer.cs">
+      <DependentUpon>frmReporteNivel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login\login2.resx">
       <DependentUpon>login2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\login1.resx">
       <DependentUpon>login1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmBuscarEstudiantes.resx">
+      <DependentUpon>frmBuscarEstudiantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\frmBuscarMat.resx">
       <DependentUpon>frmBuscarMat.cs</DependentUpon>
@@ -168,17 +183,26 @@
     <EmbeddedResource Include="Mantenimientos\MantenimientoGrupo.resx">
       <DependentUpon>MantenimientoGrupo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\MantenimientoGrupoEstudiante.resx">
+      <DependentUpon>MantenimientoGrupoEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\MantenimientoHorario.resx">
       <DependentUpon>MantenimientoHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\MantenimientoMateria.resx">
       <DependentUpon>MantenimientoMateria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\MantenimientoProfesor.resx">
-      <DependentUpon>MantenimientoProfesor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Menu\MenuAdministrador.resx">
       <DependentUpon>MenuAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MenuEstudiante.resx">
+      <DependentUpon>MenuEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MenuPadre.resx">
+      <DependentUpon>MenuPadre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MenuProfesor.resx">
+      <DependentUpon>MenuProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -189,7 +213,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\frmReporteNivel.resx">
+      <DependentUpon>frmReporteNivel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReportNivel.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CapaLogica.NivelLogica.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -199,6 +228,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ProyectoProgra3DBDataSet.xsc">
+      <DependentUpon>ProyectoProgra3DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoProgra3DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProyectoProgra3DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProyectoProgra3DBDataSet.xss">
+      <DependentUpon>ProyectoProgra3DBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -213,6 +253,7 @@
       <Name>Entidades</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
