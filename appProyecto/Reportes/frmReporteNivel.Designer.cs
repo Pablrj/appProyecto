@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.proyectoProgra3DBDataSet = new appProyecto.ProyectoProgra3DBDataSet();
             this.nivelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.proyectoProgra3DBDataSet = new appProyecto.ProyectoProgra3DBDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.nivelTableAdapter = new appProyecto.ProyectoProgra3DBDataSetTableAdapters.NivelTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.proyectoProgra3DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nivelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyectoProgra3DBDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // nivelBindingSource
+            // 
+            this.nivelBindingSource.DataMember = "Nivel";
+            this.nivelBindingSource.DataSource = this.proyectoProgra3DBDataSet;
+            // 
+            // proyectoProgra3DBDataSet
+            // 
+            this.proyectoProgra3DBDataSet.DataSetName = "ProyectoProgra3DBDataSet";
+            this.proyectoProgra3DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -50,16 +60,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(678, 358);
             this.reportViewer1.TabIndex = 0;
             // 
-            // proyectoProgra3DBDataSet
-            // 
-            this.proyectoProgra3DBDataSet.DataSetName = "ProyectoProgra3DBDataSet";
-            this.proyectoProgra3DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nivelBindingSource
-            // 
-            this.nivelBindingSource.DataMember = "Nivel";
-            this.nivelBindingSource.DataSource = this.proyectoProgra3DBDataSet;
-            // 
             // nivelTableAdapter
             // 
             this.nivelTableAdapter.ClearBeforeFill = true;
@@ -71,10 +71,11 @@
             this.ClientSize = new System.Drawing.Size(678, 358);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmReporteNivel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReporteNivel";
             this.Load += new System.EventHandler(this.frmReporteNivel_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.proyectoProgra3DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nivelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyectoProgra3DBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

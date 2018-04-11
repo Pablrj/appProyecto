@@ -61,6 +61,7 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lstMat);
             this.Name = "frmBuscarEstudiantes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscarEstudiantes";
             this.Load += new System.EventHandler(this.frmBuscarEstudiantes_Load);
             this.ResumeLayout(false);

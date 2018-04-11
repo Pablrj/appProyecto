@@ -61,6 +61,7 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lstMat);
             this.Name = "frmBuscarMat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscarMat";
             this.Load += new System.EventHandler(this.frmBuscarMat_Load);
             this.ResumeLayout(false);

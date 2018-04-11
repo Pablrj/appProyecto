@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.butMateriaProfesor = new System.Windows.Forms.Button();
             this.butHorario = new System.Windows.Forms.Button();
             this.butAula = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.butNiveles = new System.Windows.Forms.Button();
             this.butCancelar = new System.Windows.Forms.Button();
             this.butAceptar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mantenimientos";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(194, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(188, 74);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Grupo Estudiante";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // butMateriaProfesor
             // 
@@ -192,16 +202,6 @@
             this.butAceptar.UseVisualStyleBackColor = true;
             this.butAceptar.Click += new System.EventHandler(this.butAceptar_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(194, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 74);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Grupo Estudiante";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // MenuAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +212,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "MenuAdministrador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuAdministrador";
             this.Load += new System.EventHandler(this.MenuAdministrador_Load);
             this.groupBox1.ResumeLayout(false);

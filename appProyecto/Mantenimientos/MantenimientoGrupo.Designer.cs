@@ -224,6 +224,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "MantenimientoGrupo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MantenimientoGrupo";
             this.Load += new System.EventHandler(this.MantenimientoGrupo_Load);
             this.toolStrip1.ResumeLayout(false);

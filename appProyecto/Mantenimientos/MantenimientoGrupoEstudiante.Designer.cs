@@ -109,6 +109,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "MantenimientoGrupoEstudiante";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MantenimientoGrupoEstudiante";
             this.Load += new System.EventHandler(this.MantenimientoGrupoEstudiante_Load);
             this.groupBox2.ResumeLayout(false);

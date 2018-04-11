@@ -14,7 +14,9 @@ namespace appProyecto
 {
     public partial class MantenimientoGrupo : Form
     {
+
         GrupoLogica logica = null;
+
         public MantenimientoGrupo()
         {
             InitializeComponent();
@@ -131,7 +133,7 @@ namespace appProyecto
                 this.comboAula.Text = mat.IDAula.ID.ToString();
                 this.comboFecha.Text = mat.IDHorario.ID.ToString();
                 this.comboProfesor.Text = mat.IDUsuarioProfesor.ID.ToString();
-                this.comboGuia.Text = mat.Guia.ToString();
+                this.comboGuia.Text = mat.Guia.ToString(); 
             }
         }
 

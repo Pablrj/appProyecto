@@ -63,6 +63,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(611, 25);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // toolStripButton1
             // 
@@ -138,6 +139,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.group);
             this.Name = "MantenimientoHorario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MantenimientoHorario";
             this.Load += new System.EventHandler(this.MantenimientoHorario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

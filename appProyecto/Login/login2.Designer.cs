@@ -492,6 +492,7 @@
             this.Controls.Add(this.butAceptar);
             this.Controls.Add(this.groupBox3);
             this.Name = "login2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login2";
             this.Load += new System.EventHandler(this.login2_Load);
             this.groupBox1.ResumeLayout(false);

@@ -143,6 +143,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "MantenimientoMateria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MantenimientoMateria";
             this.Load += new System.EventHandler(this.MantenimientoMateria_Load);
             this.toolStrip1.ResumeLayout(false);
