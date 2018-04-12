@@ -1,6 +1,7 @@
 ﻿using Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -249,6 +250,61 @@ namespace CapaDatos
             {
                 conexion.Close();
             }
+
+            return lista;
+        }
+
+
+        public List<Usuario> SeleccionarTodosEstudiantes(int idgrupo)
+        {
+            List<Usuario> lista = new List<Usuario>();
+            //Paso 1:
+            SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
+            try
+            {
+                conexion.Open();
+                //Paso 2:
+                string sql = "SP_Estudiante_Por_GrupoID";
+                //Paso 3:
+                SqlCommand comando = new SqlCommand(sql, conexion);
+
+
+                comando.Parameters.AddWithValue("@id", idgrupo);
+
+                comando.CommandType = CommandType.StoredProcedure;
+
+                SqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    
+                    Usuario usuario = null;
+                   
+                        usuario = new Estudiante();
+                        usuario.ID = Convert.ToInt32(reader["ID"].ToString());
+                        usuario.NombreCompleto = reader["NombreCompleto"].ToString();
+                        usuario.IDNivel = new NivelDatos().SeleccionarporId(Convert.ToInt32(reader["IDNivel"]));
+                        usuario.Genero = reader["Genero"].ToString();
+                        usuario.FechaNacimiento = Convert.ToDateTime(reader["FechaNacimiento"].ToString());
+                        usuario.CorreoPadre = reader["CorreoPadre"].ToString();
+                        usuario.TelefonoPadre = reader["TelefonoPadre"].ToString();
+                        usuario.Contraseña = reader["Contraseña"].ToString();
+                        usuario.Estado = Convert.ToBoolean(reader["Estado"].ToString());
+                        usuario.IDTipoUsuario = new TipoUsuarioDatos().SeleccionarporId(Convert.ToInt32(reader["IDTipoUsuario"]));
+                        usuario.QR = reader["QR"].ToString();
+                    
+                    lista.Add(usuario);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
 
             return lista;
         }

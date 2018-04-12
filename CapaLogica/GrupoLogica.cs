@@ -39,5 +39,9 @@ namespace CapaLogica
         {
             datos.Eliminar(Id);
         }
+        public List<Usuario> SeleccionarTodosEstudiantes(int id)
+        {
+            return datos.SeleccionarTodosEstudiantes(id);
+        }
     }
 }

@@ -109,7 +109,7 @@ namespace appProyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-         MenuPadre f = new MenuPadre();
+         MenuProfesor f= new MenuProfesor();
             f.Show();
         }
     }
