@@ -55,6 +55,7 @@
             this.groupBox1.Controls.Add(this.butAula);
             this.groupBox1.Controls.Add(this.butGrupo);
             this.groupBox1.Controls.Add(this.butMateria);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(388, 412);
@@ -129,6 +130,7 @@
             this.groupBox2.Controls.Add(this.butAusencias);
             this.groupBox2.Controls.Add(this.butAsistencia);
             this.groupBox2.Controls.Add(this.butNiveles);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(406, 23);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 385);
@@ -184,7 +186,8 @@
             // 
             // butCancelar
             // 
-            this.butCancelar.Location = new System.Drawing.Point(304, 414);
+            this.butCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butCancelar.Location = new System.Drawing.Point(320, 414);
             this.butCancelar.Name = "butCancelar";
             this.butCancelar.Size = new System.Drawing.Size(188, 74);
             this.butCancelar.TabIndex = 6;
@@ -194,7 +197,8 @@
             // 
             // butAceptar
             // 
-            this.butAceptar.Location = new System.Drawing.Point(70, 413);
+            this.butAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAceptar.Location = new System.Drawing.Point(86, 413);
             this.butAceptar.Name = "butAceptar";
             this.butAceptar.Size = new System.Drawing.Size(188, 74);
             this.butAceptar.TabIndex = 7;
@@ -213,7 +217,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "MenuAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MenuAdministrador";
+            this.Text = "Administrador";
             this.Load += new System.EventHandler(this.MenuAdministrador_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

@@ -43,6 +43,7 @@
             this.groupBox2.Controls.Add(this.btnBorrar);
             this.groupBox2.Controls.Add(this.lstMat);
             this.groupBox2.Controls.Add(this.btnAgregar);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(199, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(187, 229);
@@ -54,9 +55,9 @@
             // 
             this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.Color.Red;
-            this.btnBorrar.Location = new System.Drawing.Point(149, 58);
+            this.btnBorrar.Location = new System.Drawing.Point(149, 120);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(32, 30);
+            this.btnBorrar.Size = new System.Drawing.Size(32, 98);
             this.btnBorrar.TabIndex = 9;
             this.btnBorrar.Text = "x";
             this.btnBorrar.UseVisualStyleBackColor = true;
@@ -65,9 +66,10 @@
             // lstMat
             // 
             this.lstMat.FormattingEnabled = true;
+            this.lstMat.ItemHeight = 16;
             this.lstMat.Location = new System.Drawing.Point(14, 22);
             this.lstMat.Name = "lstMat";
-            this.lstMat.Size = new System.Drawing.Size(129, 199);
+            this.lstMat.Size = new System.Drawing.Size(129, 196);
             this.lstMat.TabIndex = 5;
             // 
             // btnAgregar
@@ -76,7 +78,7 @@
             this.btnAgregar.ForeColor = System.Drawing.Color.Green;
             this.btnAgregar.Location = new System.Drawing.Point(149, 22);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(32, 30);
+            this.btnAgregar.Size = new System.Drawing.Size(32, 100);
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -85,6 +87,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lstProf);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(181, 229);
@@ -95,9 +98,10 @@
             // lstProf
             // 
             this.lstProf.FormattingEnabled = true;
+            this.lstProf.ItemHeight = 16;
             this.lstProf.Location = new System.Drawing.Point(14, 22);
             this.lstProf.Name = "lstProf";
-            this.lstProf.Size = new System.Drawing.Size(152, 199);
+            this.lstProf.Size = new System.Drawing.Size(152, 196);
             this.lstProf.TabIndex = 5;
             this.lstProf.SelectedIndexChanged += new System.EventHandler(this.lstProf_SelectedIndexChanged);
             // 
@@ -110,7 +114,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmMatProf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMatProf";
+            this.Text = "Materia Profesor";
             this.Load += new System.EventHandler(this.frmMatProf_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

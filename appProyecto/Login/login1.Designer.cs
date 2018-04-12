@@ -69,9 +69,10 @@
             // 
             // butAceptar
             // 
+            this.butAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butAceptar.Location = new System.Drawing.Point(48, 175);
             this.butAceptar.Name = "butAceptar";
-            this.butAceptar.Size = new System.Drawing.Size(145, 23);
+            this.butAceptar.Size = new System.Drawing.Size(145, 45);
             this.butAceptar.TabIndex = 3;
             this.butAceptar.Text = "Aceptar";
             this.butAceptar.UseVisualStyleBackColor = true;
@@ -79,9 +80,10 @@
             // 
             // butCancelar
             // 
+            this.butCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butCancelar.Location = new System.Drawing.Point(209, 175);
             this.butCancelar.Name = "butCancelar";
-            this.butCancelar.Size = new System.Drawing.Size(145, 23);
+            this.butCancelar.Size = new System.Drawing.Size(145, 45);
             this.butCancelar.TabIndex = 4;
             this.butCancelar.Text = "Cancelar";
             this.butCancelar.UseVisualStyleBackColor = true;
@@ -89,9 +91,10 @@
             // 
             // butRegistrarse
             // 
-            this.butRegistrarse.Location = new System.Drawing.Point(164, 216);
+            this.butRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butRegistrarse.Location = new System.Drawing.Point(154, 226);
             this.butRegistrarse.Name = "butRegistrarse";
-            this.butRegistrarse.Size = new System.Drawing.Size(95, 23);
+            this.butRegistrarse.Size = new System.Drawing.Size(95, 37);
             this.butRegistrarse.TabIndex = 5;
             this.butRegistrarse.Text = "Registrarse";
             this.butRegistrarse.UseVisualStyleBackColor = true;
@@ -117,7 +120,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(36, 240);
+            this.button1.Location = new System.Drawing.Point(12, 263);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 23);
             this.button1.TabIndex = 8;
@@ -145,7 +148,7 @@
             this.MinimizeBox = false;
             this.Name = "login1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "login1";
+            this.Text = "Iniciar Seccion";
             this.Load += new System.EventHandler(this.login1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

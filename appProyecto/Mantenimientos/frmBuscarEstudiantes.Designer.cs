@@ -34,9 +34,10 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(101, 214);
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Location = new System.Drawing.Point(65, 214);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 29);
+            this.btnAceptar.Size = new System.Drawing.Size(155, 29);
             this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -62,7 +63,7 @@
             this.Controls.Add(this.lstMat);
             this.Name = "frmBuscarEstudiantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmBuscarEstudiantes";
+            this.Text = "Buscar Estudiante";
             this.Load += new System.EventHandler(this.frmBuscarEstudiantes_Load);
             this.ResumeLayout(false);
 

@@ -41,15 +41,15 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(15, 33);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 1;
             // 
             // butBuscar
             // 
-            this.butBuscar.Location = new System.Drawing.Point(141, 31);
+            this.butBuscar.Location = new System.Drawing.Point(141, 21);
             this.butBuscar.Name = "butBuscar";
-            this.butBuscar.Size = new System.Drawing.Size(186, 23);
-            this.butBuscar.TabIndex = 1;
+            this.butBuscar.Size = new System.Drawing.Size(186, 33);
+            this.butBuscar.TabIndex = 2;
             this.butBuscar.Text = "Buscar";
             this.butBuscar.UseVisualStyleBackColor = true;
             this.butBuscar.Click += new System.EventHandler(this.butBuscar_Click);
@@ -58,8 +58,8 @@
             // 
             this.butEnviarCorreo.Location = new System.Drawing.Point(141, 60);
             this.butEnviarCorreo.Name = "butEnviarCorreo";
-            this.butEnviarCorreo.Size = new System.Drawing.Size(186, 23);
-            this.butEnviarCorreo.TabIndex = 2;
+            this.butEnviarCorreo.Size = new System.Drawing.Size(186, 30);
+            this.butEnviarCorreo.TabIndex = 3;
             this.butEnviarCorreo.Text = "Enviar Correo";
             this.butEnviarCorreo.UseVisualStyleBackColor = true;
             this.butEnviarCorreo.Click += new System.EventHandler(this.butEnviarCorreo_Click);
@@ -77,6 +77,7 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.butBuscar);
             this.groupBox1.Controls.Add(this.butEnviarCorreo);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(42, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(381, 100);
@@ -93,7 +94,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "MenuProfesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MenuProfesor";
+            this.Text = "Profesor";
             this.Load += new System.EventHandler(this.MenuProfesor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

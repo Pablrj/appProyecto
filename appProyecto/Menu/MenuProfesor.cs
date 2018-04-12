@@ -28,7 +28,7 @@ namespace appProyecto
 
         private void MenuProfesor_Load(object sender, EventArgs e)
         {
-           
+
             listaAsistencia = new AsistenciaLogica().SeleccionarTodos();
 
         }
@@ -63,7 +63,18 @@ namespace appProyecto
 
         private void butEnviarCorreo_Click(object sender, EventArgs e)
         {
+            Usuario usuario = (Usuario)dataGridView1.SelectedRows[0].DataBoundItem;
+
+            if (grupoLogica.enviar_correo(usuario.CorreoPadre) == true)
+            {
+                MessageBox.Show("Mensaje Enviado");
+            }
+            else
+            {
+                MessageBox.Show("Mensaje NO Enviado");
+            }
 
         }
+
     }
 }

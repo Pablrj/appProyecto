@@ -34,9 +34,10 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(57, 208);
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Location = new System.Drawing.Point(38, 208);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 29);
+            this.btnAceptar.Size = new System.Drawing.Size(155, 29);
             this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -48,7 +49,7 @@
             this.lstMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstMat.FormattingEnabled = true;
             this.lstMat.ItemHeight = 16;
-            this.lstMat.Location = new System.Drawing.Point(21, 12);
+            this.lstMat.Location = new System.Drawing.Point(38, 12);
             this.lstMat.Name = "lstMat";
             this.lstMat.Size = new System.Drawing.Size(155, 180);
             this.lstMat.TabIndex = 4;
@@ -57,12 +58,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(198, 249);
+            this.ClientSize = new System.Drawing.Size(231, 249);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lstMat);
             this.Name = "frmBuscarMat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmBuscarMat";
+            this.Text = "Buscat Materia";
             this.Load += new System.EventHandler(this.frmBuscarMat_Load);
             this.ResumeLayout(false);
 
