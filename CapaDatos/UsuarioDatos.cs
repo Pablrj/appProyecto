@@ -370,6 +370,10 @@ namespace CapaDatos
             {
                 throw;
             }
+            finally
+            {
+                conexion.Close();
+            }
         }
 
         public void Eliminar(int id)
@@ -481,6 +485,10 @@ namespace CapaDatos
             catch (Exception)
             {
                 throw;
+            }
+            finally
+            {
+                conexion.Close();
             }
         }
 

@@ -116,9 +116,9 @@ namespace CapaDatos
                     mat = new Estudiante
                     {
                         ID = Convert.ToInt32(reader["Id"]),
-                        NombreCompleto= reader["NombreCompleto"].ToString()
+                        NombreCompleto= reader["NombreCompleto"].ToString(),
                        
-                    };
+                };
 
                     lista.Add(mat);
 

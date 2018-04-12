@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsistenciaDatos.cs" />
     <Compile Include="AulaDatos.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="GrupoDatos.cs" />

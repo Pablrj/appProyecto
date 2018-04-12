@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsistenciaLogica.cs" />
     <Compile Include="AulaLogica.cs" />
     <Compile Include="GrupoEstudianteLogica.cs" />
     <Compile Include="GrupoLogica.cs" />

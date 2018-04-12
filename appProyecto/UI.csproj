@@ -36,9 +36,36 @@
     <StartupObject>appProyecto.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="BarcodeLib, Version=1.1.0.0, Culture=neutral, PublicKeyToken=5f09bda868cc39e7, processorArchitecture=MSIL">
       <HintPath>..\packages\BarcodeLib.1.1.0.0\lib\net20\BarcodeLib.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="BarcodeLib.BarcodeReader">
+      <HintPath>G:\LibreriasQR\BarcodeLib_NETBarcodeReader_Trial\BarcodeLib.BarcodeReader.dll</HintPath>
     </Reference>
     <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Gma.QrCodeNet.0.4.1.2\lib\net40\Gma.QrCodeNet.Encoding.dll</HintPath>
@@ -64,6 +91,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menu\MenuEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuEstudiante.Designer.cs">
+      <DependentUpon>MenuEstudiante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\login2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,12 +164,6 @@
     <Compile Include="Menu\MenuAdministrador.Designer.cs">
       <DependentUpon>MenuAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\MenuEstudiante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu\MenuEstudiante.Designer.cs">
-      <DependentUpon>MenuEstudiante.cs</DependentUpon>
-    </Compile>
     <Compile Include="Menu\MenuPadre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +189,9 @@
     <Compile Include="Reportes\frmReporteNivel.Designer.cs">
       <DependentUpon>frmReporteNivel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Menu\MenuEstudiante.resx">
+      <DependentUpon>MenuEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\login2.resx">
       <DependentUpon>login2.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,9 +224,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\MenuAdministrador.resx">
       <DependentUpon>MenuAdministrador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu\MenuEstudiante.resx">
-      <DependentUpon>MenuEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\MenuPadre.resx">
       <DependentUpon>MenuPadre.cs</DependentUpon>

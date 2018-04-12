@@ -156,12 +156,12 @@ namespace CapaDatos
                 //Abrir la conexion
                 conexion.Open();
                 //Paso 2: Instruccion
-                string sql = "Sp_Grupo_SelectRow";
+                string sql = "Sp_OptGrupo_EstudianteID";
 
                 //Paso 3: Comando para ejecutar el paso 2
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
-                comando.Parameters.AddWithValue("@Id", Id);
+                comando.Parameters.AddWithValue("@ID_Estudiante", Id);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;

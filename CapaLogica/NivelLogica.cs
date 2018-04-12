@@ -19,6 +19,8 @@ namespace CapaLogica
         {
             return datos.SeleccionarporId(Id);
         }
+       
+
 
     }
 }

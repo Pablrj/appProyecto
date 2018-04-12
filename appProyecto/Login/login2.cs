@@ -38,15 +38,14 @@ namespace appProyecto
             comboNivel.DisplayMember = "nombre";
             comboNivel.ValueMember = "ID";
 
-            comboMateria.DataSource = new CapaLogica.MateriaLogica().SeleccionarTodos();
-            comboMateria.DisplayMember = "Nombre";
-            comboMateria.ValueMember = "ID";
+          
         
         }
         private void butAceptar_Click(object sender, EventArgs e)
         {
             if (this.radioEstudiante.Checked)
             {
+               
                 try
                 {
                     if (this.textIdentificacion.Text.Length > 9)
@@ -65,10 +64,7 @@ namespace appProyecto
                     {
                         throw new Exception("Debe seleccionar el genero");
                     }
-                    if (this.comboMateria.SelectedIndex == -1)
-                    {
-                        throw new Exception("Debe seleccionar la materia");
-                    }
+                    
                     if (!this.dateTimePicker1.Checked)
                     {
                         throw new Exception("Debe seleccionar la fecha de nacimiento");
@@ -115,6 +111,26 @@ namespace appProyecto
                       
 
                         usuario.QR=imagen.ToString();
+                        //guardar el QR en una carpeta
+                        string folderName = @"C:\Users\José Pablo\Desktop\Codigo";
+                        string pathString = System.IO.Path.Combine(folderName);
+
+
+                        if (System.IO.Directory.Exists(pathString) != true)
+                        {
+                            System.IO.Directory.CreateDirectory(pathString);
+                            imagen.Save("C:\\Users\\José Pablo\\Desktop\\Codigo\\" + this.textIdentificacion.Text + ".png", ImageFormat.Png);
+                          
+
+                        }
+                        else
+                        {
+                            imagen.Save("C:\\Users\\José Pablo\\Desktop\\Codigo\\" + this.textIdentificacion.Text + ".png", ImageFormat.Png);
+                         
+                        }
+
+
+
                         if (this.textContraseña.Text != this.textRepeContraEstu.Text)
                         {
                             MessageBox.Show("Las contraseñs deben de ser iguales");
@@ -169,7 +185,7 @@ namespace appProyecto
                             IDTipoUsuario = new TipoUsuario() { ID = 4, Descripcion = "Padre" },
                             FechaNacimiento = (DateTime)dateTimePicker1.Value,
                             Genero = "",
-                            IDNivel = null,
+                            IDNivel = (Nivel)this.comboNivel.SelectedItem,
                             CorreoPadre = "",
                             TelefonoPadre = "",
                             QR = "",
@@ -218,10 +234,7 @@ namespace appProyecto
                     {
                         throw new Exception("Debe digitar la contrasenna 2");
                     }              
-                    if (this.comboMateria.SelectedIndex == -1)
-                    {
-                        throw new Exception("Debe digitar materia");
-                    }
+                    
                     int iden = Convert.ToInt32(this.textIdentificacionProfesor.Text);
                     if (usuarioLogica.ObtenerPorId(iden) == null)
                     {
@@ -283,6 +296,7 @@ namespace appProyecto
                 this.groupBox1.Visible = true;
                 this.groupBox2.Visible = false;
                 this.groupBox3.Visible = false;
+                comboNivel.SelectedIndex = 1;
             }                          
         }
 

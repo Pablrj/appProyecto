@@ -56,12 +56,10 @@
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textIdentificacionProfesor = new System.Windows.Forms.MaskedTextBox();
-            this.comboMateria = new System.Windows.Forms.ComboBox();
             this.textRepetirContra = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.textcContrasennaProfesor = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.textNombreProfesor = new System.Windows.Forms.TextBox();
@@ -129,9 +127,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textNombreCompleto);
-            this.groupBox1.Location = new System.Drawing.Point(112, 66);
+            this.groupBox1.Location = new System.Drawing.Point(104, 50);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(267, 353);
+            this.groupBox1.Size = new System.Drawing.Size(266, 353);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Estudiantes";
@@ -260,9 +258,9 @@
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.textContrasennaPadre);
             this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Location = new System.Drawing.Point(122, 72);
+            this.groupBox3.Location = new System.Drawing.Point(110, 48);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(257, 323);
+            this.groupBox3.Size = new System.Drawing.Size(266, 186);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Padre";
@@ -321,18 +319,16 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.textIdentificacionProfesor);
-            this.groupBox2.Controls.Add(this.comboMateria);
             this.groupBox2.Controls.Add(this.textRepetirContra);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.textcContrasennaProfesor);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.textNombreProfesor);
-            this.groupBox2.Location = new System.Drawing.Point(122, 66);
+            this.groupBox2.Location = new System.Drawing.Point(105, 50);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(277, 323);
+            this.groupBox2.Size = new System.Drawing.Size(266, 192);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Profesor";
@@ -345,17 +341,9 @@
             this.textIdentificacionProfesor.Size = new System.Drawing.Size(100, 20);
             this.textIdentificacionProfesor.TabIndex = 20;
             // 
-            // comboMateria
-            // 
-            this.comboMateria.FormattingEnabled = true;
-            this.comboMateria.Location = new System.Drawing.Point(118, 106);
-            this.comboMateria.Name = "comboMateria";
-            this.comboMateria.Size = new System.Drawing.Size(121, 21);
-            this.comboMateria.TabIndex = 19;
-            // 
             // textRepetirContra
             // 
-            this.textRepetirContra.Location = new System.Drawing.Point(118, 171);
+            this.textRepetirContra.Location = new System.Drawing.Point(118, 147);
             this.textRepetirContra.Name = "textRepetirContra";
             this.textRepetirContra.PasswordChar = '*';
             this.textRepetirContra.Size = new System.Drawing.Size(114, 20);
@@ -364,7 +352,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 171);
+            this.label16.Location = new System.Drawing.Point(6, 147);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(98, 13);
             this.label16.TabIndex = 17;
@@ -372,7 +360,7 @@
             // 
             // textcContrasennaProfesor
             // 
-            this.textcContrasennaProfesor.Location = new System.Drawing.Point(118, 136);
+            this.textcContrasennaProfesor.Location = new System.Drawing.Point(118, 112);
             this.textcContrasennaProfesor.Name = "textcContrasennaProfesor";
             this.textcContrasennaProfesor.PasswordChar = '*';
             this.textcContrasennaProfesor.Size = new System.Drawing.Size(114, 20);
@@ -381,20 +369,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 136);
+            this.label9.Location = new System.Drawing.Point(6, 112);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 13);
             this.label9.TabIndex = 16;
             this.label9.Text = "Contraseña";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 106);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Materia ";
             // 
             // label12
             // 
@@ -444,7 +423,7 @@
             // radioEstudiante
             // 
             this.radioEstudiante.AutoSize = true;
-            this.radioEstudiante.Location = new System.Drawing.Point(66, 27);
+            this.radioEstudiante.Location = new System.Drawing.Point(95, 27);
             this.radioEstudiante.Name = "radioEstudiante";
             this.radioEstudiante.Size = new System.Drawing.Size(75, 17);
             this.radioEstudiante.TabIndex = 10;
@@ -456,7 +435,7 @@
             // radioProfesor
             // 
             this.radioProfesor.AutoSize = true;
-            this.radioProfesor.Location = new System.Drawing.Point(198, 27);
+            this.radioProfesor.Location = new System.Drawing.Point(222, 27);
             this.radioProfesor.Name = "radioProfesor";
             this.radioProfesor.Size = new System.Drawing.Size(64, 17);
             this.radioProfesor.TabIndex = 11;
@@ -468,7 +447,7 @@
             // radioPadre
             // 
             this.radioPadre.AutoSize = true;
-            this.radioPadre.Location = new System.Drawing.Point(310, 27);
+            this.radioPadre.Location = new System.Drawing.Point(338, 27);
             this.radioPadre.Name = "radioPadre";
             this.radioPadre.Size = new System.Drawing.Size(53, 17);
             this.radioPadre.TabIndex = 12;
@@ -481,14 +460,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(637, 526);
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.ClientSize = new System.Drawing.Size(506, 526);
             this.Controls.Add(this.radioPadre);
             this.Controls.Add(this.radioProfesor);
             this.Controls.Add(this.radioEstudiante);
             this.Controls.Add(this.butCancelar);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.butAceptar);
             this.Controls.Add(this.groupBox3);
             this.Name = "login2";
@@ -525,7 +504,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textcContrasennaProfesor;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textNombreProfesor;
@@ -547,7 +525,6 @@
         private System.Windows.Forms.ComboBox comboNivel;
         private System.Windows.Forms.ComboBox comboGenero;
         private System.Windows.Forms.MaskedTextBox textIdentificacionPadre;
-        private System.Windows.Forms.ComboBox comboMateria;
         private System.Windows.Forms.MaskedTextBox textIdentificacion;
         private System.Windows.Forms.MaskedTextBox textIdentificacionProfesor;
     }

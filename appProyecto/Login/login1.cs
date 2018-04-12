@@ -14,15 +14,18 @@ namespace appProyecto
 {
     public partial class login1 : Form
     {
+        public Usuario usua { get; set; }
         public login1()
         {
+            usuarioLogica = new UsuarioLogica();
             InitializeComponent();     
         }
 
-        UsuarioLogica usuarioLogica = new UsuarioLogica();
+        UsuarioLogica usuarioLogica;
 
         private void butCancelar_Click(object sender, EventArgs e)
         {
+            
             Application.Exit();
         }
 
@@ -44,6 +47,7 @@ namespace appProyecto
             {
                 if(usu.ID == Convert.ToInt32(textIdentificacion.Text) && usu.Contraseña.Trim().Equals(textContraseña.Text)){
                     usuario = usu.IDTipoUsuario.ID;
+                    usua = usu;
                 }
             }
             return usuario;
@@ -78,9 +82,10 @@ namespace appProyecto
                         MenuEstudiante frm = new MenuEstudiante();
                         frm.ShowDialog();
                     }
-                    if (ObtenerUsuario()== 4)
+
+                    if (ObtenerUsuario()== 4)//padre
                     {
-                        MenuPadre frm = new MenuPadre();
+                        MenuPadre frm = new MenuPadre();                  
                         frm.ShowDialog();
                     }
                     this.textContraseña.Text = "";
@@ -104,7 +109,7 @@ namespace appProyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Mantenimientos.MantenimientoGrupoEstudiante f = new Mantenimientos.MantenimientoGrupoEstudiante();
+         MenuPadre f = new MenuPadre();
             f.Show();
         }
     }
