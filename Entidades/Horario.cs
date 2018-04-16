@@ -9,6 +9,11 @@ namespace Entidades
     public class Horario
     {
         public int ID { get; set; }
-        public DateTime horario { get; set; }
+        public DateTime Hora { get; set; }
+
+        public override string ToString()
+        {
+            return ID.ToString();
+        }
     }
 }

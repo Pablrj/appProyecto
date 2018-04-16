@@ -61,6 +61,7 @@
     <Compile Include="Horario.cs" />
     <Compile Include="Materia.cs" />
     <Compile Include="Nivel.cs" />
+    <Compile Include="Nota.cs" />
     <Compile Include="Padre.cs" />
     <Compile Include="Profesor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

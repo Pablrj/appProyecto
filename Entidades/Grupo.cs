@@ -15,6 +15,8 @@ namespace Entidades
         public bool Guia { get; set; }
         public int cantidad { get; set; }
 
+        public Nivel IDNivel { get; set; }
+
         public override string ToString()
         {
             return ID.ToString();

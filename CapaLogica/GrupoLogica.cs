@@ -22,12 +22,11 @@ namespace CapaLogica
                 throw new ApplicationException("El nombre es requerido");
             }
 
-            if (datos.SeleccionarPorID(cat.ID) == null)
+            if (datos.SeleccionarPorIDGrupo(cat.ID) == null)
                 datos.Insertar(cat);
             else
                 datos.Actualizar(cat);
         }
-
         public List<Grupo> SeleccionarTodos()
         {
             return datos.SeleccionarTodos();
@@ -36,7 +35,6 @@ namespace CapaLogica
         {
             return datos.SeleccionarPorID(Id);
         }
-
         public void Eliminar(int Id)
         {
             datos.Eliminar(Id);
@@ -46,7 +44,6 @@ namespace CapaLogica
             return datos.SeleccionarTodosEstudiantes(id);
 
         }
-
         public Boolean enviar_correo(string correo1)
         {
             bool estado = false;
@@ -79,18 +76,18 @@ namespace CapaLogica
                     foreach (string word in cadena)
                         correo.To.Add(word.Trim());
                 }
-                //if (cc == "") { }
-                //else
-                //{
-                //    string[] cadena1 = cc.Split();
-                //    foreach (string word in cadena1) correo.CC.Add(word.Trim());
-                //}
-                //if (adjuntos == "") { }
-                //else
-                //{
-                //    string[] cadena2 = adjuntos.Split();
-                //    foreach (string word in cadena2) correo.Attachments.Add(new Attachment(word));
-                //}
+                if (cc == "") { }
+               else
+                {
+                    string[] cadena1 = cc.Split();
+                    foreach (string word in cadena1) correo.CC.Add(word.Trim());
+                }
+                if (adjuntos == "") { }
+                else
+                {
+                    string[] cadena2 = adjuntos.Split();
+                   foreach (string word in cadena2) correo.Attachments.Add(new Attachment(word));
+                }
                 cliente.Credentials = new NetworkCredential(remitente, contraseña);
                 cliente.EnableSsl = true;
                 cliente.Send(correo);
@@ -104,6 +101,12 @@ namespace CapaLogica
 
             return estado;
 
+
+        }
+
+        public List<Usuario> SeleccionarTodosEstudiantesProf(int id,int idGrupo)
+        {
+            return datos.SeleccionarEstudiantesGrupoProf(id,idGrupo);
 
         }
     }

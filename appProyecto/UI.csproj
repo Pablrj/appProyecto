@@ -91,6 +91,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mantenimientos\MantenimientoCrearHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\MantenimientoCrearHorarios.Designer.cs">
+      <DependentUpon>MantenimientoCrearHorarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu\MenuEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,12 +189,55 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoProgra3DBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProyectoProgra3DBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoProgra3DBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProyectoProgra3DBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoProgra3DBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Evaluacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Evaluacion.Designer.cs">
+      <DependentUpon>Evaluacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReporteAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReporteAsistencia.Designer.cs">
+      <DependentUpon>frmReporteAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReporteAusencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReporteAusencia.Designer.cs">
+      <DependentUpon>frmReporteAusencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReporteEvaluacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReporteEvaluacion.Designer.cs">
+      <DependentUpon>frmReporteEvaluacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\frmReporteNivel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\frmReporteNivel.Designer.cs">
       <DependentUpon>frmReporteNivel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\frmReporteNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReporteNota.Designer.cs">
+      <DependentUpon>frmReporteNota.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Mantenimientos\MantenimientoCrearHorarios.resx">
+      <DependentUpon>MantenimientoCrearHorarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\MenuEstudiante.resx">
       <DependentUpon>MenuEstudiante.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,9 +289,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\Evaluacion.resx">
+      <DependentUpon>Evaluacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmReporteAsistencia.resx">
+      <DependentUpon>frmReporteAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmReporteAusencia.resx">
+      <DependentUpon>frmReporteAusencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmReporteEvaluacion.resx">
+      <DependentUpon>frmReporteEvaluacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmReporteNivel.resx">
       <DependentUpon>frmReporteNivel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmReporteNota.resx">
+      <DependentUpon>frmReporteNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteAsistencia.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteAusencias.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteEvaluacion.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteNota.rdlc" />
     <EmbeddedResource Include="Reportes\ReportNivel.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CapaLogica.NivelLogica.datasource" />
@@ -265,6 +333,28 @@
     </None>
     <None Include="ProyectoProgra3DBDataSet.xss">
       <DependentUpon>ProyectoProgra3DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoProgra3DBDataSet1.xsc">
+      <DependentUpon>ProyectoProgra3DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoProgra3DBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProyectoProgra3DBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProyectoProgra3DBDataSet1.xss">
+      <DependentUpon>ProyectoProgra3DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoProgra3DBDataSet2.xsc">
+      <DependentUpon>ProyectoProgra3DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ProyectoProgra3DBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProyectoProgra3DBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProyectoProgra3DBDataSet2.xss">
+      <DependentUpon>ProyectoProgra3DBDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

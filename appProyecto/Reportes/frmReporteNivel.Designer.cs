@@ -57,7 +57,7 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "appProyecto.Reportes.ReportNivel.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(678, 358);
+            this.reportViewer1.Size = new System.Drawing.Size(759, 407);
             this.reportViewer1.TabIndex = 0;
             // 
             // nivelTableAdapter
@@ -68,7 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 358);
+            this.ClientSize = new System.Drawing.Size(759, 407);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmReporteNivel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

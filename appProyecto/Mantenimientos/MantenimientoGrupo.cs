@@ -26,7 +26,6 @@ namespace appProyecto
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-           
 
             try
             {
@@ -37,7 +36,8 @@ namespace appProyecto
                     IDAula = (Aula)comboAula.SelectedItem,
                     IDHorario = (Horario)comboFecha.SelectedItem,
                     Guia = Convert.ToBoolean(comboGuia.SelectedIndex == 0),
-                    IDUsuarioProfesor = comboProfesor.SelectedItem as Profesor
+                    IDUsuarioProfesor = comboProfesor.SelectedItem as Profesor,
+                    IDNivel=(Nivel)comboNivel.SelectedItem
             };
                
                 logica.guardar(mat);
@@ -113,6 +113,10 @@ namespace appProyecto
             comboGuia.Items.Add("Si");
             comboGuia.Items.Add("No");
             comboGuia.SelectedIndex = 1;
+
+            comboNivel.DataSource = new CapaLogica.NivelLogica().SeleccionarTodos();
+            comboNivel.DisplayMember = "nombre";
+            comboNivel.ValueMember = "ID";
             try
             {
                 Refrescar();
@@ -133,7 +137,8 @@ namespace appProyecto
                 this.comboAula.Text = mat.IDAula.ID.ToString();
                 this.comboFecha.Text = mat.IDHorario.ID.ToString();
                 this.comboProfesor.Text = mat.IDUsuarioProfesor.ID.ToString();
-                this.comboGuia.Text = mat.Guia.ToString(); 
+                this.comboGuia.Text = mat.Guia.ToString();
+                this.comboNivel.Text = mat.IDNivel.ToString();
             }
         }
 

@@ -21,20 +21,18 @@ namespace appProyecto
             Logica = new MateriaLogica();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void toolAgregar_Click(object sender, EventArgs e)
         {
             try
             {
+
                 Materia mat = new Materia()
                 {
                     ID = Convert.ToInt32(textID.Text),
                     Nombre = textDescripcion.Text
                 };
+                
+             
                 Logica.guardar(mat);
                 Refrescar();
                 MessageBox.Show("Materia guardada con Exito", "Ventana", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -46,5 +46,38 @@ namespace CapaLogica
         {
             return datos.SeleccionarPorID(Id);
         }
+
+        public List<Usuario> listaUsuarioAusentes(int i)
+        {
+            List<Usuario> listaGrupos = null;
+            List<Asistencia> listaAsistencia =  SeleccionarTodos();
+
+            List<Usuario> Ausentes = new List<Usuario>();
+
+            try
+            {
+                listaGrupos = new GrupoLogica().SeleccionarTodosEstudiantes(Convert.ToInt32(i));
+
+                foreach (Usuario estudiante in listaGrupos)
+                {
+                    foreach (Asistencia presente in listaAsistencia)
+                    {
+                        if (estudiante.ID != presente.IDestudiante.ID)
+                        {
+                            Ausentes.Add(estudiante);
+                        }
+
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return Ausentes;
+        }        
+
+
     }
 }

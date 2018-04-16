@@ -38,6 +38,7 @@ namespace appProyecto
             comboNivel.DisplayMember = "nombre";
             comboNivel.ValueMember = "ID";
 
+            comboGenero.SelectedIndex = 0;
           
         
         }
@@ -48,7 +49,7 @@ namespace appProyecto
                
                 try
                 {
-                    if (this.textIdentificacion.Text.Length > 9)
+                    if (this.textIdentificacion.Text.Length ==0)
                     {
                         throw new Exception("Debe digitar un numero de cedula valida");
                     }
@@ -161,14 +162,14 @@ namespace appProyecto
             {
                 try
                 {
-                    if (this.textIdentificacionPadre.Text.Length > 9)
+                    if (this.textIdentificacionPadre.Text.Length ==0)
                     {
                         throw new Exception("Debe digitar un numero de cedula valida");
                     }
              
                     if (this.textContrasennaPadre.Text.Trim().Equals(""))
                     {
-                        throw new Exception("Debe digitar la contrasenna 2");
+                        throw new Exception("Debe digitar la contrasenna ");
                     }
 
                     if (this.textRepetirContraPadre.Text.Trim().Equals(""))
@@ -222,10 +223,14 @@ namespace appProyecto
             {
                 try
                 {
-                    if (this.textIdentificacionProfesor.Text.Length > 9)
+                    if (this.textIdentificacionProfesor.Text.Length ==0)
                     {
                         throw new Exception("Debe digitar un numero de cedula valida");
-                    }                 
+                    }
+                    if (this.textNombreProfesor.Text.Equals(""))
+                    {
+                        throw new Exception("Debe digitar Nombre ");
+                    }              
                     if (this.textcContrasennaProfesor.Text.Trim().Equals(""))
                     {
                         throw new Exception("Debe digitar la contrasenna");
@@ -319,5 +324,7 @@ namespace appProyecto
                 this.groupBox3.Visible = true;
             }
         }
+
+   
     }
 }

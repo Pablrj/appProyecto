@@ -24,12 +24,7 @@ namespace appProyecto
             MantenimientoMateria man = new MantenimientoMateria();
             man.Show();
         }
-
-      
-
-      
-
-       
+    
 
         private void butGrupo_Click(object sender, EventArgs e)
         {
@@ -55,10 +50,7 @@ namespace appProyecto
             a.Show();
         }
 
-        private void MenuAdministrador_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void butCancelar_Click(object sender, EventArgs e)
         {
@@ -79,6 +71,36 @@ namespace appProyecto
         private void button1_Click(object sender, EventArgs e)
         {
             MantenimientoGrupoEstudiante f = new MantenimientoGrupoEstudiante();
+            f.Show();
+        }
+
+        private void butAsistencia_Click(object sender, EventArgs e)
+        {
+            frmReporteAsistencia f = new frmReporteAsistencia();
+            f.Show();
+        }
+
+        private void butAusencias_Click(object sender, EventArgs e)
+        {
+            frmReporteAusencia f = new frmReporteAusencia();
+            f.Show();
+        }
+
+        private void butEvaluacion_Click(object sender, EventArgs e)
+        {
+            frmReporteEvaluacion f = new frmReporteEvaluacion();
+            f.Show();
+        }
+
+        private void butNota_Click(object sender, EventArgs e)
+        {
+            frmReporteNota f = new frmReporteNota();
+            f.Show();
+        }
+
+        private void butCrearHorarios_Click(object sender, EventArgs e)
+        {
+            MantenimientoCrearHorarios f = new MantenimientoCrearHorarios();
             f.Show();
         }
     }

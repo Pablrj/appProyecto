@@ -61,6 +61,7 @@
     <Compile Include="MateriaLogica.cs" />
     <Compile Include="MatProfLogica.cs" />
     <Compile Include="NivelLogica.cs" />
+    <Compile Include="NotaLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoUsuarioLogica.cs" />
     <Compile Include="UsuarioLogica.cs" />

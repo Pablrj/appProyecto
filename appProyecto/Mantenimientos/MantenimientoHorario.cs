@@ -27,7 +27,7 @@ namespace appProyecto.Mantenimientos
             {
                 Horario mat = (Horario)dataGridView1.SelectedRows[0].DataBoundItem;
                 this.textDato.Text = mat.ID.ToString();
-                this.dateTimePicker1.Text = mat.horario.ToString();
+                this.dateTimePicker1.Text = mat.Hora.ToString();
             }
         }
   
@@ -45,7 +45,7 @@ namespace appProyecto.Mantenimientos
                 Horario mat = new Horario()
                 {
                     ID = Convert.ToInt32(this.textDato.Text),
-                    horario = (DateTime)dateTimePicker1.Value
+                    Hora = (DateTime)dateTimePicker1.Value
                 };
                 Logica.guardar(mat);
                 Refrescar();

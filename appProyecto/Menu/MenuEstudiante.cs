@@ -93,6 +93,12 @@ namespace appProyecto
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (this.listBox1.SelectedIndex==-1)
+            {
+                MessageBox.Show("Debe de seleccionar una opcion de la lista");
+                return;
+            }
+
             Usuario usuario = new CapaLogica.UsuarioLogica().ObtenerPorId(Convert.ToInt32(this.listBox1.SelectedItem));
 
             Grupo grupo = new CapaLogica.GrupoLogica().SeleccionarMateriaPorId(usuario.ID);

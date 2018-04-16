@@ -238,7 +238,6 @@ namespace CapaDatos
 
 
         }
-
         public Asistencia SeleccionarPorFecha(DateTime Id)
         {
             Asistencia mat = null;

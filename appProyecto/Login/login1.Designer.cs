@@ -149,7 +149,6 @@
             this.Name = "login1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Seccion";
-            this.Load += new System.EventHandler(this.login1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -14,7 +14,7 @@ namespace CapaLogica
 
         public void guardar(Horario cat)
         {
-            if (String.IsNullOrWhiteSpace(cat.horario.ToString()))
+            if (String.IsNullOrWhiteSpace(cat.Hora.ToString()))
             {
                 throw new ApplicationException("El nombre es requerido");
             }

@@ -50,7 +50,7 @@
             this.groupBox1.Size = new System.Drawing.Size(211, 74);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Estudiantes";
+            this.groupBox1.Text = "Estudiante";
             // 
             // txtID
             // 

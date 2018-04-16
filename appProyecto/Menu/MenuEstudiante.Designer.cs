@@ -116,6 +116,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -126,6 +127,7 @@
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(322, 195);
             this.dataGridView1.TabIndex = 7;
@@ -137,7 +139,6 @@
             this.Codigo.HeaderText = "Codigo";
             this.Codigo.Name = "Codigo";
             this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 75;
             // 
             // Grupo
             // 
@@ -145,7 +146,6 @@
             this.Grupo.HeaderText = "Grupo";
             this.Grupo.Name = "Grupo";
             this.Grupo.ReadOnly = true;
-            this.Grupo.Width = 50;
             // 
             // Asistencia
             // 
@@ -153,7 +153,6 @@
             this.Asistencia.HeaderText = "Asistencia";
             this.Asistencia.Name = "Asistencia";
             this.Asistencia.ReadOnly = true;
-            this.Asistencia.Width = 50;
             // 
             // IDUsuarioEstudiante
             // 

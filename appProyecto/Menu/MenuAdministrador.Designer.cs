@@ -43,12 +43,14 @@
             this.butNiveles = new System.Windows.Forms.Button();
             this.butCancelar = new System.Windows.Forms.Button();
             this.butAceptar = new System.Windows.Forms.Button();
+            this.butCrearHorarios = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.butCrearHorarios);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.butMateriaProfesor);
             this.groupBox1.Controls.Add(this.butHorario);
@@ -65,7 +67,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(194, 32);
+            this.button1.Location = new System.Drawing.Point(194, 31);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(188, 74);
             this.button1.TabIndex = 8;
@@ -146,6 +148,7 @@
             this.butNota.TabIndex = 5;
             this.butNota.Text = "Nota";
             this.butNota.UseVisualStyleBackColor = true;
+            this.butNota.Click += new System.EventHandler(this.butNota_Click);
             // 
             // butEvaluacion
             // 
@@ -155,6 +158,7 @@
             this.butEvaluacion.TabIndex = 4;
             this.butEvaluacion.Text = "Evaluacion";
             this.butEvaluacion.UseVisualStyleBackColor = true;
+            this.butEvaluacion.Click += new System.EventHandler(this.butEvaluacion_Click);
             // 
             // butAusencias
             // 
@@ -164,6 +168,7 @@
             this.butAusencias.TabIndex = 3;
             this.butAusencias.Text = "Ausencias";
             this.butAusencias.UseVisualStyleBackColor = true;
+            this.butAusencias.Click += new System.EventHandler(this.butAusencias_Click);
             // 
             // butAsistencia
             // 
@@ -173,6 +178,7 @@
             this.butAsistencia.TabIndex = 2;
             this.butAsistencia.Text = "Asistencia";
             this.butAsistencia.UseVisualStyleBackColor = true;
+            this.butAsistencia.Click += new System.EventHandler(this.butAsistencia_Click);
             // 
             // butNiveles
             // 
@@ -206,6 +212,16 @@
             this.butAceptar.UseVisualStyleBackColor = true;
             this.butAceptar.Click += new System.EventHandler(this.butAceptar_Click);
             // 
+            // butCrearHorarios
+            // 
+            this.butCrearHorarios.Location = new System.Drawing.Point(194, 100);
+            this.butCrearHorarios.Name = "butCrearHorarios";
+            this.butCrearHorarios.Size = new System.Drawing.Size(188, 74);
+            this.butCrearHorarios.TabIndex = 9;
+            this.butCrearHorarios.Text = "Crear Horarios";
+            this.butCrearHorarios.UseVisualStyleBackColor = true;
+            this.butCrearHorarios.Click += new System.EventHandler(this.butCrearHorarios_Click);
+            // 
             // MenuAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,7 +234,6 @@
             this.Name = "MenuAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador";
-            this.Load += new System.EventHandler(this.MenuAdministrador_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -242,5 +257,6 @@
         private System.Windows.Forms.Button butHorario;
         private System.Windows.Forms.Button butMateriaProfesor;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butCrearHorarios;
     }
 }
