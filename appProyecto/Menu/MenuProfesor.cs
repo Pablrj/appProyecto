@@ -125,7 +125,8 @@ namespace appProyecto
             try
             {
                 //dtgNotas
-                dtgEstudiante.DataSource = new GrupoLogica().SeleccionarTodosEstudiantesProf(usuario.ID,Convert.ToInt32(this.txtGrupoID.Text));
+                dtgEstudiante.DataSource = new GrupoLogica().SeleccionarTodosEstudiantesProf
+                    (usuario.ID,Convert.ToInt32(this.txtGrupoID.Text));
                 dtgNotas.DataSource = logica.SeleccionarTodos();
             }
             catch (Exception)

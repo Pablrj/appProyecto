@@ -99,10 +99,13 @@ namespace appProyecto
                 return;
             }
 
-            Usuario usuario = new CapaLogica.UsuarioLogica().ObtenerPorId(Convert.ToInt32(this.listBox1.SelectedItem));
+            //validador para comparar y no se caiga
 
-            Grupo grupo = new CapaLogica.GrupoLogica().SeleccionarMateriaPorId(usuario.ID);
+            Usuario usuario = usuario = new CapaLogica.UsuarioLogica().ObtenerPorId(Convert.ToInt32(this.listBox1.SelectedItem));  
+         
 
+            Grupo grupo = new GrupoLogica().SeleccionarGrupoPorId(usuario.ID);
+            //grupo sale nulo
             try
             {
                 Asistencia asis = new Asistencia()

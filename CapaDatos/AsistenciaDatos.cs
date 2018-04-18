@@ -314,7 +314,7 @@ namespace CapaDatos
                 SqlDataReader reader = comando.ExecuteReader();
                 while (reader.Read())
                 {
-
+                    //Viene nulo el grupo
                     mat = new Asistencia
                     {
                         ID = DateTime.Parse(reader["Id"].ToString()),

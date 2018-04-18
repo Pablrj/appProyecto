@@ -31,9 +31,11 @@ namespace CapaLogica
         {
             return datos.SeleccionarTodos();
         }
-        public Grupo SeleccionarMateriaPorId(int Id)
+        public Grupo SeleccionarGrupoPorId(int Id)
         {
-            return datos.SeleccionarPorID(Id);
+            
+
+            return datos.SeleccionarPorID(Id);////Sp_OptGrupo_EstudianteID
         }
         public void Eliminar(int Id)
         {
