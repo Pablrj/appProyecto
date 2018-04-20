@@ -42,7 +42,7 @@ namespace appProyecto
                
                 logica.guardar(mat);
                 Refrescar();
-                MessageBox.Show("Aula guardada con Exito", "Ventana", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Grupo guardado con Exito", "Ventana", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
@@ -59,14 +59,14 @@ namespace appProyecto
         }
 
 
-        public UsuarioLogica buscarProfe()
-        {
+        //public UsuarioLogica buscarProfe()
+        //{
 
-            UsuarioLogica logica = new UsuarioLogica();
-            logica.ObtenerPorId(Convert.ToInt32(comboProfesor.SelectedItem));
+        //    UsuarioLogica logica = new UsuarioLogica();
+        //    logica.ObtenerPorId(Convert.ToInt32(comboProfesor.SelectedItem));
 
-            return logica;
-        }
+        //    return logica;
+        //}
 
         
 
@@ -74,7 +74,7 @@ namespace appProyecto
         {
             if (this.textNombre.Text.Equals(" "))
             {
-                MessageBox.Show("No hay Categorias para Eliminar", "Ventana", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No hay grupo para Eliminar", "Ventana", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
 
             }
@@ -85,7 +85,7 @@ namespace appProyecto
                 if (resultado == DialogResult.Yes)
                 {
                     logica.Eliminar(Convert.ToInt32(this.textNombre.Text));
-                    MessageBox.Show("Categoria eliminada con Exito", "Ventana", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Grupo eliminada con Exito", "Ventana", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 Refrescar();
 

@@ -25,7 +25,7 @@ namespace CapaLogica
         {
             return datos.SeleccionarTodos();
         }
-        public Nota SeleccionarMateriaPorId(int IdPro,int estu)
+        public Nota SeleccionarNotaPorId(int IdPro,int estu)
         {
             return datos.SeleccionarPorID(IdPro,estu);
         }

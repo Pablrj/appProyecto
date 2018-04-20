@@ -50,7 +50,7 @@ namespace appProyecto.Mantenimientos
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un materia");
+                MessageBox.Show("Debe seleccionar un Estudiante");
             }
         }
     }

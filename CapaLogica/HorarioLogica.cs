@@ -29,7 +29,7 @@ namespace CapaLogica
         {
             return datos.SeleccionarTodos();
         }
-        public Horario SeleccionarMateriaPorId(int Id)
+        public Horario SeleccionarHorarioPorId(int Id)
         {
             return datos.SeleccionarPorID(Id);
         }

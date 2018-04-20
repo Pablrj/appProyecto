@@ -51,8 +51,8 @@ namespace CapaDatos
         /// Actualizamos un registro en la tabla Autor
         /// en la BD
         /// </summary>
-        /// <param name="mat"></param>
-        public void Actualizar(Asistencia mat)
+        /// <param name="asis"></param>
+        public void Actualizar(Asistencia asis)
         {
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -68,10 +68,10 @@ namespace CapaDatos
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
-                comando.Parameters.AddWithValue("@Id", mat.ID);
-                comando.Parameters.AddWithValue("@IDGrupo", mat.IDGrupo.ID);
-                comando.Parameters.AddWithValue("@Presente", mat.Presente);
-                comando.Parameters.AddWithValue("@IDUsuarioEstudiante", mat.IDestudiante.ID);
+                comando.Parameters.AddWithValue("@Id", asis.ID);
+                comando.Parameters.AddWithValue("@IDGrupo", asis.IDGrupo.ID);
+                comando.Parameters.AddWithValue("@Presente", asis.Presente);
+                comando.Parameters.AddWithValue("@IDUsuarioEstudiante", asis.IDestudiante.ID);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -240,7 +240,7 @@ namespace CapaDatos
         }
         public Asistencia SeleccionarPorFecha(DateTime Id)
         {
-            Asistencia mat = null;
+            Asistencia asis = null;
 
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -265,7 +265,7 @@ namespace CapaDatos
                 while (reader.Read())
                 {
 
-                    mat = new Asistencia
+                    asis = new Asistencia
                     {
                         ID = DateTime.Parse(reader["Id"].ToString()),
                         IDGrupo = new GrupoDatos().SeleccionarPorID(Convert.ToInt32(reader["IDGrupo"])),
@@ -285,7 +285,7 @@ namespace CapaDatos
                 conexion.Close();
             }
 
-            return mat;
+            return asis;
 
         }
         public Asistencia SeleccionarPorID(int Id)

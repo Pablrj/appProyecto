@@ -15,8 +15,8 @@ namespace CapaDatos
         /// Insertamos un Autor en la Tabla
         /// de la BD
         /// </summary>
-        /// <param name="mat"></param>
-        public void Insertar(Grupo mat)
+        /// <param name="gru"></param>
+        public void Insertar(Grupo gru)
         {
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -33,13 +33,13 @@ namespace CapaDatos
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
-                comando.Parameters.AddWithValue("@Id", mat.ID);
-                comando.Parameters.AddWithValue("@IDUsuarioProfesor", mat.IDUsuarioProfesor.ID);
-                comando.Parameters.AddWithValue("@IDHorario", mat.IDHorario.ID);
-                comando.Parameters.AddWithValue("@IDAula", mat.IDAula.ID);
-                comando.Parameters.AddWithValue("@Guia", mat.Guia);
-                comando.Parameters.AddWithValue("@Cantidad", mat.cantidad);
-                comando.Parameters.AddWithValue("@IDNivel", mat.IDNivel.ID);
+                comando.Parameters.AddWithValue("@Id", gru.ID);
+                comando.Parameters.AddWithValue("@IDUsuarioProfesor", gru.IDUsuarioProfesor.ID);
+                comando.Parameters.AddWithValue("@IDHorario", gru.IDHorario.ID);
+                comando.Parameters.AddWithValue("@IDAula", gru.IDAula.ID);
+                comando.Parameters.AddWithValue("@Guia", gru.Guia);
+                comando.Parameters.AddWithValue("@Cantidad", gru.cantidad);
+                comando.Parameters.AddWithValue("@IDNivel", gru.IDNivel.ID);
 
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
@@ -61,8 +61,8 @@ namespace CapaDatos
         /// Actualizamos un registro en la tabla Autor
         /// en la BD
         /// </summary>
-        /// <param name="mat"></param>
-        public void Actualizar(Grupo mat)
+        /// <param name="gru"></param>
+        public void Actualizar(Grupo gru)
         {
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -78,13 +78,13 @@ namespace CapaDatos
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
-                comando.Parameters.AddWithValue("@Id", mat.ID);
-                comando.Parameters.AddWithValue("@IDUsuarioProfesor", mat.IDUsuarioProfesor.ID);
-                comando.Parameters.AddWithValue("@IDHorario", mat.IDHorario.ID);
-                comando.Parameters.AddWithValue("@IDAula", mat.IDAula.ID);
-                comando.Parameters.AddWithValue("@Guia", mat.Guia);
-                comando.Parameters.AddWithValue("@Cantidad", mat.cantidad);
-                comando.Parameters.AddWithValue("@IDNivel", mat.IDNivel.ID);
+                comando.Parameters.AddWithValue("@Id", gru.ID);
+                comando.Parameters.AddWithValue("@IDUsuarioProfesor", gru.IDUsuarioProfesor.ID);
+                comando.Parameters.AddWithValue("@IDHorario", gru.IDHorario.ID);
+                comando.Parameters.AddWithValue("@IDAula", gru.IDAula.ID);
+                comando.Parameters.AddWithValue("@Guia", gru.Guia);
+                comando.Parameters.AddWithValue("@Cantidad", gru.cantidad);
+                comando.Parameters.AddWithValue("@IDNivel", gru.IDNivel.ID);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;

@@ -29,7 +29,7 @@ namespace CapaLogica
         {
             return datos.SeleccionarTodos();
         }
-        public Aula SeleccionarMateriaPorId(int Id)
+        public Aula SeleccionarAulaPorId(int Id)
         {
             return datos.SeleccionarPorID(Id);
         }

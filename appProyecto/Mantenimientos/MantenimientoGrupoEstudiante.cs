@@ -40,7 +40,7 @@ namespace appProyecto.Mantenimientos
                     Logica_MatProf.guardar(mat, usuario);
 
                     Refrescar();
-                    MessageBox.Show("Se Agrego un Autor al Libro seleccionado");
+                    MessageBox.Show("Se Agrego un Estudiante al Grupo seleccionado");
 
                 }
             }

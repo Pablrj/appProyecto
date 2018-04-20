@@ -10,7 +10,7 @@ namespace CapaDatos
 {
     public class GrupoEstudianteDatos
     {
-        public void Insertar(Grupo usuario, Usuario mat)
+        public void Insertar(Grupo grupo, Usuario usu)
         {
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -27,8 +27,8 @@ namespace CapaDatos
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
-                comando.Parameters.AddWithValue("@IDGrupo", usuario.ID);
-                comando.Parameters.AddWithValue("@iDUsuarioEstudiante", mat.ID);
+                comando.Parameters.AddWithValue("@IDGrupo", grupo.ID);
+                comando.Parameters.AddWithValue("@iDUsuarioEstudiante", usu.ID);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -50,7 +50,7 @@ namespace CapaDatos
         /// en la BD por el id 
         /// </summary>
         /// <param name="id"></param>
-        public void Eliminar(Grupo usuario, Usuario mat)
+        public void Eliminar(Grupo grupo, Usuario usu)
         {
 
             //Paso 1: conexion BD
@@ -67,8 +67,8 @@ namespace CapaDatos
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
-                comando.Parameters.AddWithValue("@IDGrupo", usuario.ID);
-                comando.Parameters.AddWithValue("@iDUsuarioEstudiante", mat.ID);
+                comando.Parameters.AddWithValue("@IDGrupo", grupo.ID);
+                comando.Parameters.AddWithValue("@iDUsuarioEstudiante", usu.ID);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;

@@ -15,7 +15,7 @@ namespace CapaLogica
         {
             return datos.SeleccionarTodos();
         }
-        public Nivel SeleccionarMateriaPorId(int Id)
+        public Nivel SeleccionarNivelPorId(int Id)
         {
             return datos.SeleccionarporId(Id);
         }

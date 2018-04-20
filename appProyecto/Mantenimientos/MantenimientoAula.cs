@@ -73,7 +73,7 @@ namespace appProyecto.Mantenimientos
                 if (resultado == DialogResult.Yes)
                 {
                     Logica.Eliminar(Convert.ToInt32(this.textBox1.Text));
-                    MessageBox.Show("Categoira eliminada con Exito", "Ventana", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Aula eliminada con Exito", "Ventana", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 Refrescar();
 

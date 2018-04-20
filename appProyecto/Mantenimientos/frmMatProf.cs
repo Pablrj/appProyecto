@@ -39,7 +39,7 @@ namespace appProyecto.Mantenimientos
                     Logica_MatProf.guardar(usuario, mat);
 
                     Refrescar();
-                    MessageBox.Show("Se Agrego un Autor al Libro seleccionado");
+                    MessageBox.Show("Se Agrego un Profesor a la Materia seleccionado");
 
                 }
             }

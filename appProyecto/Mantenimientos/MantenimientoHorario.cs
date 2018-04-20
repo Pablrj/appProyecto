@@ -49,7 +49,7 @@ namespace appProyecto.Mantenimientos
                 };
                 Logica.guardar(mat);
                 Refrescar();
-                MessageBox.Show("Materia guardada con Exito", "Ventana", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Horario guardada con Exito", "Ventana", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)

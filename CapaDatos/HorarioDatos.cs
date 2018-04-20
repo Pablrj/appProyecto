@@ -10,7 +10,7 @@ namespace CapaDatos
 {
     public class HorarioDatos
     {
-        public void Insertar(Horario mat)
+        public void Insertar(Horario horario)
         {
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -27,8 +27,8 @@ namespace CapaDatos
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
-                comando.Parameters.AddWithValue("@Id", mat.ID);
-                comando.Parameters.AddWithValue("@Hora", mat.Hora);
+                comando.Parameters.AddWithValue("@Id", horario.ID);
+                comando.Parameters.AddWithValue("@Hora", horario.Hora);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -49,8 +49,8 @@ namespace CapaDatos
         /// Actualizamos un registro en la tabla Autor
         /// en la BD
         /// </summary>
-        /// <param name="mat"></param>
-        public void Actualizar(Horario mat)
+        /// <param name="horario"></param>
+        public void Actualizar(Horario horario)
         {
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -66,8 +66,8 @@ namespace CapaDatos
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
-                comando.Parameters.AddWithValue("@Id", mat.ID);
-                comando.Parameters.AddWithValue("@Hora", mat.Hora);
+                comando.Parameters.AddWithValue("@Id", horario.ID);
+                comando.Parameters.AddWithValue("@Hora", horario.Hora);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;

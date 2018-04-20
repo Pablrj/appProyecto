@@ -101,7 +101,8 @@ namespace appProyecto
 
             //validador para comparar y no se caiga
 
-            Usuario usuario = usuario = new CapaLogica.UsuarioLogica().ObtenerPorId(Convert.ToInt32(this.listBox1.SelectedItem));  
+            //usuario =
+            Usuario usuario =  new CapaLogica.UsuarioLogica().ObtenerPorId(Convert.ToInt32(this.listBox1.SelectedItem));  
          
 
             Grupo grupo = new GrupoLogica().SeleccionarGrupoPorId(usuario.ID);
@@ -120,8 +121,9 @@ namespace appProyecto
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("Usuario Invalido");
+                return;
+               // throw;
             }
 
             Refrescar();

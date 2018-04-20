@@ -10,7 +10,7 @@ namespace CapaDatos
 {
    public  class AulaDatos
     {
-        public  void Insertar(Aula mat)
+        public  void Insertar(Aula au)
         {
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -27,8 +27,8 @@ namespace CapaDatos
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
-                comando.Parameters.AddWithValue("@Id", mat.ID);
-                comando.Parameters.AddWithValue("@Nombre", mat.Nombre);
+                comando.Parameters.AddWithValue("@Id", au.ID);
+                comando.Parameters.AddWithValue("@Nombre", au.Nombre);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -49,8 +49,8 @@ namespace CapaDatos
         /// Actualizamos un registro en la tabla Autor
         /// en la BD
         /// </summary>
-        /// <param name="mat"></param>
-        public void Actualizar(Aula mat)
+        /// <param name="au"></param>
+        public void Actualizar(Aula au)
         {
             //Paso 1: conexion BD
             SqlConnection conexion = new SqlConnection(Conexion.ObtenerCadena());
@@ -66,8 +66,8 @@ namespace CapaDatos
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
-                comando.Parameters.AddWithValue("@Id", mat.ID);
-                comando.Parameters.AddWithValue("@Nombre", mat.Nombre);
+                comando.Parameters.AddWithValue("@Id", au.ID);
+                comando.Parameters.AddWithValue("@Nombre", au.Nombre);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
