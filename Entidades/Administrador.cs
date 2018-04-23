@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 { /// <summary>
-/// 
+/// Esta clase se encarga de crear Administrador
 /// </summary>
     public class Administrador : Usuario
     {
