@@ -19,8 +19,10 @@ namespace appProyecto.Reportes
 
         private void frmReporteNivel_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'proyectoProgra3DBDataSet4.Sp_ReporteNiveles_SelectAll' Puede moverla o quitarla según sea necesario.
+            this.sp_ReporteNiveles_SelectAllTableAdapter.Fill(this.proyectoProgra3DBDataSet4.Sp_ReporteNiveles_SelectAll);
             // TODO: esta línea de código carga datos en la tabla 'proyectoProgra3DBDataSet.Nivel' Puede moverla o quitarla según sea necesario.
-            this.nivelTableAdapter.Fill(this.proyectoProgra3DBDataSet.Nivel);
+            //this.nivelTableAdapter.Fill(this.proyectoProgra3DBDataSet.Nivel);
            
             this.reportViewer1.RefreshReport();
         }

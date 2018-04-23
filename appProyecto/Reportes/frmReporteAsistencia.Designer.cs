@@ -31,38 +31,38 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.proyectoProgra3DBDataSet1 = new appProyecto.ProyectoProgra3DBDataSet1();
-            this.asistenciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.asistenciaTableAdapter = new appProyecto.ProyectoProgra3DBDataSet1TableAdapters.AsistenciaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.proyectoProgra3DBDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asistenciaBindingSource)).BeginInit();
+            this.proyectoProgra3DBDataSet5 = new appProyecto.ProyectoProgra3DBDataSet5();
+            this.spReporteAsistenciaSelectAllBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sp_ReporteAsistencia_SelectAllTableAdapter = new appProyecto.ProyectoProgra3DBDataSet5TableAdapters.Sp_ReporteAsistencia_SelectAllTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.proyectoProgra3DBDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spReporteAsistenciaSelectAllBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.asistenciaBindingSource;
+            reportDataSource1.Value = this.spReporteAsistenciaSelectAllBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "appProyecto.Reportes.ReporteAsistencia.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "appProyecto.Reportes.ReportAsistencia.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(567, 379);
             this.reportViewer1.TabIndex = 0;
             // 
-            // proyectoProgra3DBDataSet1
+            // proyectoProgra3DBDataSet5
             // 
-            this.proyectoProgra3DBDataSet1.DataSetName = "ProyectoProgra3DBDataSet1";
-            this.proyectoProgra3DBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.proyectoProgra3DBDataSet5.DataSetName = "ProyectoProgra3DBDataSet5";
+            this.proyectoProgra3DBDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // asistenciaBindingSource
+            // spReporteAsistenciaSelectAllBindingSource
             // 
-            this.asistenciaBindingSource.DataMember = "Asistencia";
-            this.asistenciaBindingSource.DataSource = this.proyectoProgra3DBDataSet1;
+            this.spReporteAsistenciaSelectAllBindingSource.DataMember = "Sp_ReporteAsistencia_SelectAll";
+            this.spReporteAsistenciaSelectAllBindingSource.DataSource = this.proyectoProgra3DBDataSet5;
             // 
-            // asistenciaTableAdapter
+            // sp_ReporteAsistencia_SelectAllTableAdapter
             // 
-            this.asistenciaTableAdapter.ClearBeforeFill = true;
+            this.sp_ReporteAsistencia_SelectAllTableAdapter.ClearBeforeFill = true;
             // 
             // frmReporteAsistencia
             // 
@@ -73,8 +73,8 @@
             this.Name = "frmReporteAsistencia";
             this.Text = "frmReporteAsistencia";
             this.Load += new System.EventHandler(this.frmReporteAsistencia_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.proyectoProgra3DBDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asistenciaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyectoProgra3DBDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spReporteAsistenciaSelectAllBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,8 +82,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private ProyectoProgra3DBDataSet1 proyectoProgra3DBDataSet1;
-        private System.Windows.Forms.BindingSource asistenciaBindingSource;
-        private ProyectoProgra3DBDataSet1TableAdapters.AsistenciaTableAdapter asistenciaTableAdapter;
+        private ProyectoProgra3DBDataSet5 proyectoProgra3DBDataSet5;
+        private System.Windows.Forms.BindingSource spReporteAsistenciaSelectAllBindingSource;
+        private ProyectoProgra3DBDataSet5TableAdapters.Sp_ReporteAsistencia_SelectAllTableAdapter sp_ReporteAsistencia_SelectAllTableAdapter;
     }
 }

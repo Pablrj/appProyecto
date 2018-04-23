@@ -44,7 +44,7 @@
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.notasBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "appProyecto.Reportes.ReporteNota.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "appProyecto.Reportes.ReportNota.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(774, 502);
