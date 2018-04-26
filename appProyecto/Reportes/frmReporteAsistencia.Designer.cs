@@ -31,34 +31,34 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.proyectoProgra3DBDataSet5 = new appProyecto.ProyectoProgra3DBDataSet5();
+            this.proyectoProgra3DBDataSet6 = new appProyecto.ProyectoProgra3DBDataSet6();
             this.spReporteAsistenciaSelectAllBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sp_ReporteAsistencia_SelectAllTableAdapter = new appProyecto.ProyectoProgra3DBDataSet5TableAdapters.Sp_ReporteAsistencia_SelectAllTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.proyectoProgra3DBDataSet5)).BeginInit();
+            this.sp_ReporteAsistencia_SelectAllTableAdapter = new appProyecto.ProyectoProgra3DBDataSet6TableAdapters.Sp_ReporteAsistencia_SelectAllTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.proyectoProgra3DBDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spReporteAsistenciaSelectAllBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Name = "dsAusencia";
             reportDataSource1.Value = this.spReporteAsistenciaSelectAllBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "appProyecto.Reportes.ReportAsistencia.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "appProyecto.Reportes.RepAusencias.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(567, 379);
             this.reportViewer1.TabIndex = 0;
             // 
-            // proyectoProgra3DBDataSet5
+            // proyectoProgra3DBDataSet6
             // 
-            this.proyectoProgra3DBDataSet5.DataSetName = "ProyectoProgra3DBDataSet5";
-            this.proyectoProgra3DBDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.proyectoProgra3DBDataSet6.DataSetName = "ProyectoProgra3DBDataSet6";
+            this.proyectoProgra3DBDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // spReporteAsistenciaSelectAllBindingSource
             // 
             this.spReporteAsistenciaSelectAllBindingSource.DataMember = "Sp_ReporteAsistencia_SelectAll";
-            this.spReporteAsistenciaSelectAllBindingSource.DataSource = this.proyectoProgra3DBDataSet5;
+            this.spReporteAsistenciaSelectAllBindingSource.DataSource = this.proyectoProgra3DBDataSet6;
             // 
             // sp_ReporteAsistencia_SelectAllTableAdapter
             // 
@@ -73,7 +73,7 @@
             this.Name = "frmReporteAsistencia";
             this.Text = "frmReporteAsistencia";
             this.Load += new System.EventHandler(this.frmReporteAsistencia_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.proyectoProgra3DBDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyectoProgra3DBDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spReporteAsistenciaSelectAllBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -82,8 +82,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private ProyectoProgra3DBDataSet5 proyectoProgra3DBDataSet5;
+        private ProyectoProgra3DBDataSet6 proyectoProgra3DBDataSet6;
         private System.Windows.Forms.BindingSource spReporteAsistenciaSelectAllBindingSource;
-        private ProyectoProgra3DBDataSet5TableAdapters.Sp_ReporteAsistencia_SelectAllTableAdapter sp_ReporteAsistencia_SelectAllTableAdapter;
+        private ProyectoProgra3DBDataSet6TableAdapters.Sp_ReporteAsistencia_SelectAllTableAdapter sp_ReporteAsistencia_SelectAllTableAdapter;
     }
 }

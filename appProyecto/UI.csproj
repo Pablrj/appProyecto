@@ -204,15 +204,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoProgra3DBDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProyectoProgra3DBDataSet4.cs">
+      <DependentUpon>ProyectoProgra3DBDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ProyectoProgra3DBDataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoProgra3DBDataSet4.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ProyectoProgra3DBDataSet5.Designer.cs">
+    <Compile Include="ProyectoProgra3DBDataSet6.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ProyectoProgra3DBDataSet5.xsd</DependentUpon>
+      <DependentUpon>ProyectoProgra3DBDataSet6.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reportes\Evaluacion.cs">
       <SubType>Form</SubType>
@@ -322,7 +325,7 @@
     <EmbeddedResource Include="Reportes\frmReporteNota.resx">
       <DependentUpon>frmReporteNota.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReportAsistencia.rdlc" />
+    <EmbeddedResource Include="Reportes\RepAusencias.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteAusencias.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteEvaluacion.rdlc" />
     <EmbeddedResource Include="Reportes\ReportNivelSeccion.rdlc" />
@@ -393,16 +396,16 @@
     <None Include="ProyectoProgra3DBDataSet4.xss">
       <DependentUpon>ProyectoProgra3DBDataSet4.xsd</DependentUpon>
     </None>
-    <None Include="ProyectoProgra3DBDataSet5.xsc">
-      <DependentUpon>ProyectoProgra3DBDataSet5.xsd</DependentUpon>
+    <None Include="ProyectoProgra3DBDataSet6.xsc">
+      <DependentUpon>ProyectoProgra3DBDataSet6.xsd</DependentUpon>
     </None>
-    <None Include="ProyectoProgra3DBDataSet5.xsd">
+    <None Include="ProyectoProgra3DBDataSet6.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProyectoProgra3DBDataSet5.Designer.cs</LastGenOutput>
+      <LastGenOutput>ProyectoProgra3DBDataSet6.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ProyectoProgra3DBDataSet5.xss">
-      <DependentUpon>ProyectoProgra3DBDataSet5.xsd</DependentUpon>
+    <None Include="ProyectoProgra3DBDataSet6.xss">
+      <DependentUpon>ProyectoProgra3DBDataSet6.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

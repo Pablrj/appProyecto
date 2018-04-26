@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="ProyectoProgra3DBDataSet5" targetNamespace="http://tempuri.org/ProyectoProgra3DBDataSet5.xsd" xmlns:mstns="http://tempuri.org/ProyectoProgra3DBDataSet5.xsd" xmlns="http://tempuri.org/ProyectoProgra3DBDataSet5.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="ProyectoProgra3DBDataSet6" targetNamespace="http://tempuri.org/ProyectoProgra3DBDataSet6.xsd" xmlns:mstns="http://tempuri.org/ProyectoProgra3DBDataSet6.xsd" xmlns="http://tempuri.org/ProyectoProgra3DBDataSet6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -21,9 +21,9 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Asistencia" DataSetColumn="Asistencia" />
+              <Mapping SourceColumn="IDGrupo" DataSetColumn="IDGrupo" />
               <Mapping SourceColumn="IDUsuarioEstudiante" DataSetColumn="IDUsuarioEstudiante" />
-              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -32,15 +32,15 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="ProyectoProgra3DBDataSet5" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ProyectoProgra3DBDataSet5" msprop:Generator_UserDSName="ProyectoProgra3DBDataSet5">
+  <xs:element name="ProyectoProgra3DBDataSet6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ProyectoProgra3DBDataSet6" msprop:Generator_UserDSName="ProyectoProgra3DBDataSet6">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Sp_ReporteAsistencia_SelectAll" msprop:Generator_TableClassName="Sp_ReporteAsistencia_SelectAllDataTable" msprop:Generator_TableVarName="tableSp_ReporteAsistencia_SelectAll" msprop:Generator_TablePropName="Sp_ReporteAsistencia_SelectAll" msprop:Generator_RowDeletingName="Sp_ReporteAsistencia_SelectAllRowDeleting" msprop:Generator_RowChangingName="Sp_ReporteAsistencia_SelectAllRowChanging" msprop:Generator_RowEvHandlerName="Sp_ReporteAsistencia_SelectAllRowChangeEventHandler" msprop:Generator_RowDeletedName="Sp_ReporteAsistencia_SelectAllRowDeleted" msprop:Generator_UserTableName="Sp_ReporteAsistencia_SelectAll" msprop:Generator_RowChangedName="Sp_ReporteAsistencia_SelectAllRowChanged" msprop:Generator_RowEvArgName="Sp_ReporteAsistencia_SelectAllRowChangeEvent" msprop:Generator_RowClassName="Sp_ReporteAsistencia_SelectAllRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Asistencia" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAsistencia" msprop:Generator_ColumnPropNameInRow="Asistencia" msprop:Generator_ColumnPropNameInTable="AsistenciaColumn" msprop:Generator_UserColumnName="Asistencia" type="xs:int" minOccurs="0" />
+              <xs:element name="IDGrupo" msprop:Generator_ColumnVarNameInTable="columnIDGrupo" msprop:Generator_ColumnPropNameInRow="IDGrupo" msprop:Generator_ColumnPropNameInTable="IDGrupoColumn" msprop:Generator_UserColumnName="IDGrupo" type="xs:int" />
               <xs:element name="IDUsuarioEstudiante" msprop:Generator_ColumnVarNameInTable="columnIDUsuarioEstudiante" msprop:Generator_ColumnPropNameInRow="IDUsuarioEstudiante" msprop:Generator_ColumnPropNameInTable="IDUsuarioEstudianteColumn" msprop:Generator_UserColumnName="IDUsuarioEstudiante" type="xs:int" />
-              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:dateTime" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -48,7 +48,9 @@
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Sp_ReporteAsistencia_SelectAll" />
-      <xs:field xpath="mstns:Fecha" />
+      <xs:field xpath="mstns:IDGrupo" />
+      <xs:field xpath="mstns:IDUsuarioEstudiante" />
+      <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>
 </xs:schema>

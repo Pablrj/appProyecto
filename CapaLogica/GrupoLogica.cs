@@ -55,7 +55,7 @@ namespace CapaLogica
                 string host = "smtp-mail.outlook.com";
                 int puerto = 587;
                 string remitente = "pmora0813@hotmail.com";
-                string contraseña = "Pablomora0813";
+                string contraseña = "Pabl0m0ra0813";
                 string nombre = "Pablo";
 
                 string destinatarios = correo1;

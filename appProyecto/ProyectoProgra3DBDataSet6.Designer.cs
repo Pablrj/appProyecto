@@ -20,9 +20,9 @@ namespace appProyecto {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ProyectoProgra3DBDataSet5")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ProyectoProgra3DBDataSet6")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ProyectoProgra3DBDataSet5 : global::System.Data.DataSet {
+    public partial class ProyectoProgra3DBDataSet6 : global::System.Data.DataSet {
         
         private Sp_ReporteAsistencia_SelectAllDataTable tableSp_ReporteAsistencia_SelectAll;
         
@@ -30,7 +30,7 @@ namespace appProyecto {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public ProyectoProgra3DBDataSet5() {
+        public ProyectoProgra3DBDataSet6() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace appProyecto {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected ProyectoProgra3DBDataSet5(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ProyectoProgra3DBDataSet6(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace appProyecto {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            ProyectoProgra3DBDataSet5 cln = ((ProyectoProgra3DBDataSet5)(base.Clone()));
+            ProyectoProgra3DBDataSet6 cln = ((ProyectoProgra3DBDataSet6)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace appProyecto {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "ProyectoProgra3DBDataSet5";
+            this.DataSetName = "ProyectoProgra3DBDataSet6";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ProyectoProgra3DBDataSet5.xsd";
+            this.Namespace = "http://tempuri.org/ProyectoProgra3DBDataSet6.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableSp_ReporteAsistencia_SelectAll = new Sp_ReporteAsistencia_SelectAllDataTable();
@@ -225,7 +225,7 @@ namespace appProyecto {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ProyectoProgra3DBDataSet5 ds = new ProyectoProgra3DBDataSet5();
+            ProyectoProgra3DBDataSet6 ds = new ProyectoProgra3DBDataSet6();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -279,11 +279,11 @@ namespace appProyecto {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Sp_ReporteAsistencia_SelectAllDataTable : global::System.Data.TypedTableBase<Sp_ReporteAsistencia_SelectAllRow> {
             
-            private global::System.Data.DataColumn columnAsistencia;
+            private global::System.Data.DataColumn columnIDGrupo;
             
             private global::System.Data.DataColumn columnIDUsuarioEstudiante;
             
-            private global::System.Data.DataColumn columnFecha;
+            private global::System.Data.DataColumn columnID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -320,9 +320,9 @@ namespace appProyecto {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AsistenciaColumn {
+            public global::System.Data.DataColumn IDGrupoColumn {
                 get {
-                    return this.columnAsistencia;
+                    return this.columnIDGrupo;
                 }
             }
             
@@ -336,9 +336,9 @@ namespace appProyecto {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FechaColumn {
+            public global::System.Data.DataColumn IDColumn {
                 get {
-                    return this.columnFecha;
+                    return this.columnID;
                 }
             }
             
@@ -379,12 +379,12 @@ namespace appProyecto {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Sp_ReporteAsistencia_SelectAllRow AddSp_ReporteAsistencia_SelectAllRow(int Asistencia, int IDUsuarioEstudiante, System.DateTime Fecha) {
+            public Sp_ReporteAsistencia_SelectAllRow AddSp_ReporteAsistencia_SelectAllRow(int IDGrupo, int IDUsuarioEstudiante, System.DateTime ID) {
                 Sp_ReporteAsistencia_SelectAllRow rowSp_ReporteAsistencia_SelectAllRow = ((Sp_ReporteAsistencia_SelectAllRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Asistencia,
+                        IDGrupo,
                         IDUsuarioEstudiante,
-                        Fecha};
+                        ID};
                 rowSp_ReporteAsistencia_SelectAllRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSp_ReporteAsistencia_SelectAllRow);
                 return rowSp_ReporteAsistencia_SelectAllRow;
@@ -392,9 +392,11 @@ namespace appProyecto {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Sp_ReporteAsistencia_SelectAllRow FindByFecha(System.DateTime Fecha) {
+            public Sp_ReporteAsistencia_SelectAllRow FindByIDGrupoIDUsuarioEstudianteID(int IDGrupo, int IDUsuarioEstudiante, System.DateTime ID) {
                 return ((Sp_ReporteAsistencia_SelectAllRow)(this.Rows.Find(new object[] {
-                            Fecha})));
+                            IDGrupo,
+                            IDUsuarioEstudiante,
+                            ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -414,26 +416,27 @@ namespace appProyecto {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnAsistencia = base.Columns["Asistencia"];
+                this.columnIDGrupo = base.Columns["IDGrupo"];
                 this.columnIDUsuarioEstudiante = base.Columns["IDUsuarioEstudiante"];
-                this.columnFecha = base.Columns["Fecha"];
+                this.columnID = base.Columns["ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnAsistencia = new global::System.Data.DataColumn("Asistencia", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAsistencia);
+                this.columnIDGrupo = new global::System.Data.DataColumn("IDGrupo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDGrupo);
                 this.columnIDUsuarioEstudiante = new global::System.Data.DataColumn("IDUsuarioEstudiante", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIDUsuarioEstudiante);
-                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFecha);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnFecha}, true));
-                this.columnAsistencia.ReadOnly = true;
+                                this.columnIDGrupo,
+                                this.columnIDUsuarioEstudiante,
+                                this.columnID}, true));
+                this.columnIDGrupo.AllowDBNull = false;
                 this.columnIDUsuarioEstudiante.AllowDBNull = false;
-                this.columnFecha.AllowDBNull = false;
-                this.columnFecha.Unique = true;
+                this.columnID.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -501,7 +504,7 @@ namespace appProyecto {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ProyectoProgra3DBDataSet5 ds = new ProyectoProgra3DBDataSet5();
+                ProyectoProgra3DBDataSet6 ds = new ProyectoProgra3DBDataSet6();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -576,18 +579,12 @@ namespace appProyecto {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Asistencia {
+            public int IDGrupo {
                 get {
-                    try {
-                        return ((int)(this[this.tableSp_ReporteAsistencia_SelectAll.AsistenciaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Asistencia\' de la tabla \'Sp_ReporteAsistencia_SelectAll\' " +
-                                "es DBNull.", e);
-                    }
+                    return ((int)(this[this.tableSp_ReporteAsistencia_SelectAll.IDGrupoColumn]));
                 }
                 set {
-                    this[this.tableSp_ReporteAsistencia_SelectAll.AsistenciaColumn] = value;
+                    this[this.tableSp_ReporteAsistencia_SelectAll.IDGrupoColumn] = value;
                 }
             }
             
@@ -604,25 +601,13 @@ namespace appProyecto {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime Fecha {
+            public System.DateTime ID {
                 get {
-                    return ((global::System.DateTime)(this[this.tableSp_ReporteAsistencia_SelectAll.FechaColumn]));
+                    return ((global::System.DateTime)(this[this.tableSp_ReporteAsistencia_SelectAll.IDColumn]));
                 }
                 set {
-                    this[this.tableSp_ReporteAsistencia_SelectAll.FechaColumn] = value;
+                    this[this.tableSp_ReporteAsistencia_SelectAll.IDColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAsistenciaNull() {
-                return this.IsNull(this.tableSp_ReporteAsistencia_SelectAll.AsistenciaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAsistenciaNull() {
-                this[this.tableSp_ReporteAsistencia_SelectAll.AsistenciaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -661,7 +646,7 @@ namespace appProyecto {
         }
     }
 }
-namespace appProyecto.ProyectoProgra3DBDataSet5TableAdapters {
+namespace appProyecto.ProyectoProgra3DBDataSet6TableAdapters {
     
     
     /// <summary>
@@ -785,9 +770,9 @@ namespace appProyecto.ProyectoProgra3DBDataSet5TableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Sp_ReporteAsistencia_SelectAll";
-            tableMapping.ColumnMappings.Add("Asistencia", "Asistencia");
+            tableMapping.ColumnMappings.Add("IDGrupo", "IDGrupo");
             tableMapping.ColumnMappings.Add("IDUsuarioEstudiante", "IDUsuarioEstudiante");
-            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
+            tableMapping.ColumnMappings.Add("ID", "ID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -813,7 +798,7 @@ namespace appProyecto.ProyectoProgra3DBDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ProyectoProgra3DBDataSet5.Sp_ReporteAsistencia_SelectAllDataTable dataTable) {
+        public virtual int Fill(ProyectoProgra3DBDataSet6.Sp_ReporteAsistencia_SelectAllDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -826,9 +811,9 @@ namespace appProyecto.ProyectoProgra3DBDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ProyectoProgra3DBDataSet5.Sp_ReporteAsistencia_SelectAllDataTable GetData() {
+        public virtual ProyectoProgra3DBDataSet6.Sp_ReporteAsistencia_SelectAllDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ProyectoProgra3DBDataSet5.Sp_ReporteAsistencia_SelectAllDataTable dataTable = new ProyectoProgra3DBDataSet5.Sp_ReporteAsistencia_SelectAllDataTable();
+            ProyectoProgra3DBDataSet6.Sp_ReporteAsistencia_SelectAllDataTable dataTable = new ProyectoProgra3DBDataSet6.Sp_ReporteAsistencia_SelectAllDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -902,7 +887,7 @@ namespace appProyecto.ProyectoProgra3DBDataSet5TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(ProyectoProgra3DBDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ProyectoProgra3DBDataSet6 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -912,7 +897,7 @@ namespace appProyecto.ProyectoProgra3DBDataSet5TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(ProyectoProgra3DBDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ProyectoProgra3DBDataSet6 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -922,7 +907,7 @@ namespace appProyecto.ProyectoProgra3DBDataSet5TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(ProyectoProgra3DBDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ProyectoProgra3DBDataSet6 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -956,7 +941,7 @@ namespace appProyecto.ProyectoProgra3DBDataSet5TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(ProyectoProgra3DBDataSet5 dataSet) {
+        public virtual int UpdateAll(ProyectoProgra3DBDataSet6 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

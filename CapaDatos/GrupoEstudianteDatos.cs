@@ -67,8 +67,8 @@ namespace CapaDatos
                 SqlCommand comando = new SqlCommand(sql, conexion);
 
                 //Paso 4: Enviar los parametros
-                comando.Parameters.AddWithValue("@IDGrupo", grupo.ID);
-                comando.Parameters.AddWithValue("@iDUsuarioEstudiante", usu.ID);
+                comando.Parameters.AddWithValue("@ID_Mat", grupo.ID);
+                comando.Parameters.AddWithValue("@ID_Prof", usu.ID);
 
                 //Paso 4.1: Usar el Procedimineto Almacenado
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
@@ -116,9 +116,9 @@ namespace CapaDatos
                     mat = new Estudiante
                     {
                         ID = Convert.ToInt32(reader["Id"]),
-                        NombreCompleto= reader["NombreCompleto"].ToString(),
+                        NombreCompleto= reader["NombreCompleto"].ToString()
                        
-                };
+                    };
 
                     lista.Add(mat);
 

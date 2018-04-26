@@ -56,6 +56,7 @@ namespace appProyecto.Mantenimientos
             {
                 lstProf.DisplayMember = "titulo";
                 lstProf.DataSource = Logica.SeleccionarTodos();
+               
             }
             catch (Exception)
             {
@@ -87,7 +88,7 @@ namespace appProyecto.Mantenimientos
             {
                 Usuario enUsus = (Usuario)lstMat.SelectedItem;
                 Grupo mate = (Grupo)lstProf.SelectedItem;
-                Logica_MatProf.Eliminar(enUsus, mate);
+                Logica_MatProf.Eliminar(enUsus, mate);                
                 Refrescar();
                 MessageBox.Show("Se Elimino un Estudiante al Grupo seleccionado");
             }
