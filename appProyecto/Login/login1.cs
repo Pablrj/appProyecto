@@ -98,7 +98,9 @@ namespace appProyecto
             catch (Exception ex)
             {
                 LogManager.LogException(ex, 01);
+               
                 MessageBox.Show(ex.Message, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
 
 

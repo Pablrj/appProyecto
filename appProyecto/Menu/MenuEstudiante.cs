@@ -106,7 +106,7 @@ namespace appProyecto
          
 
             Grupo grupo = new GrupoLogica().SeleccionarGrupoPorId(usuario.ID);
-            //grupo sale nulo
+            
             try
             {
                 Asistencia asis = new Asistencia()
