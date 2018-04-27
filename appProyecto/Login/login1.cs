@@ -108,13 +108,12 @@ namespace appProyecto
 
 
 
-        private void button1_Click(object sender, EventArgs e)
+      
+
+        private void login1_Load(object sender, EventArgs e)
         {
-            MenuAdministrador f = new MenuAdministrador();
-            f.Show();
+
         }
-
-
     }
 }
 
