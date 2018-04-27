@@ -128,7 +128,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textNombreCompleto);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(97, 48);
+            this.groupBox1.Location = new System.Drawing.Point(106, 56);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(266, 353);
             this.groupBox1.TabIndex = 5;
@@ -141,7 +141,7 @@
             this.textIdentificacion.Mask = "000000000";
             this.textIdentificacion.Name = "textIdentificacion";
             this.textIdentificacion.Size = new System.Drawing.Size(114, 20);
-            this.textIdentificacion.TabIndex = 19;
+            this.textIdentificacion.TabIndex = 1;
             // 
             // comboGenero
             // 
@@ -149,7 +149,7 @@
             this.comboGenero.Location = new System.Drawing.Point(137, 142);
             this.comboGenero.Name = "comboGenero";
             this.comboGenero.Size = new System.Drawing.Size(114, 21);
-            this.comboGenero.TabIndex = 18;
+            this.comboGenero.TabIndex = 4;
             // 
             // comboNivel
             // 
@@ -157,7 +157,7 @@
             this.comboNivel.Location = new System.Drawing.Point(137, 109);
             this.comboNivel.Name = "comboNivel";
             this.comboNivel.Size = new System.Drawing.Size(114, 21);
-            this.comboNivel.TabIndex = 17;
+            this.comboNivel.TabIndex = 3;
             // 
             // textRepeContraEstu
             // 
@@ -165,7 +165,7 @@
             this.textRepeContraEstu.Name = "textRepeContraEstu";
             this.textRepeContraEstu.PasswordChar = '*';
             this.textRepeContraEstu.Size = new System.Drawing.Size(114, 20);
-            this.textRepeContraEstu.TabIndex = 16;
+            this.textRepeContraEstu.TabIndex = 9;
             // 
             // label18
             // 
@@ -260,7 +260,7 @@
             this.groupBox3.Controls.Add(this.textContrasennaPadre);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(100, 48);
+            this.groupBox3.Location = new System.Drawing.Point(109, 56);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(261, 186);
             this.groupBox3.TabIndex = 7;
@@ -273,7 +273,7 @@
             this.textIdentificacionPadre.Mask = "999999999";
             this.textIdentificacionPadre.Name = "textIdentificacionPadre";
             this.textIdentificacionPadre.Size = new System.Drawing.Size(114, 20);
-            this.textIdentificacionPadre.TabIndex = 9;
+            this.textIdentificacionPadre.TabIndex = 1;
             // 
             // label17
             // 
@@ -290,7 +290,7 @@
             this.textRepetirContraPadre.Name = "textRepetirContraPadre";
             this.textRepetirContraPadre.PasswordChar = '*';
             this.textRepetirContraPadre.Size = new System.Drawing.Size(114, 20);
-            this.textRepetirContraPadre.TabIndex = 7;
+            this.textRepetirContraPadre.TabIndex = 3;
             // 
             // label15
             // 
@@ -307,7 +307,7 @@
             this.textContrasennaPadre.Name = "textContrasennaPadre";
             this.textContrasennaPadre.PasswordChar = '*';
             this.textContrasennaPadre.Size = new System.Drawing.Size(114, 20);
-            this.textContrasennaPadre.TabIndex = 5;
+            this.textContrasennaPadre.TabIndex = 2;
             // 
             // label19
             // 
@@ -329,7 +329,7 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.textNombreProfesor);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(97, 42);
+            this.groupBox2.Location = new System.Drawing.Point(106, 56);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(266, 192);
             this.groupBox2.TabIndex = 6;
@@ -342,7 +342,7 @@
             this.textIdentificacionProfesor.Mask = "000000000";
             this.textIdentificacionProfesor.Name = "textIdentificacionProfesor";
             this.textIdentificacionProfesor.Size = new System.Drawing.Size(114, 20);
-            this.textIdentificacionProfesor.TabIndex = 20;
+            this.textIdentificacionProfesor.TabIndex = 1;
             // 
             // textRepetirContra
             // 
@@ -350,7 +350,7 @@
             this.textRepetirContra.Name = "textRepetirContra";
             this.textRepetirContra.PasswordChar = '*';
             this.textRepetirContra.Size = new System.Drawing.Size(114, 20);
-            this.textRepetirContra.TabIndex = 18;
+            this.textRepetirContra.TabIndex = 4;
             // 
             // label16
             // 
@@ -367,7 +367,7 @@
             this.textcContrasennaProfesor.Name = "textcContrasennaProfesor";
             this.textcContrasennaProfesor.PasswordChar = '*';
             this.textcContrasennaProfesor.Size = new System.Drawing.Size(114, 20);
-            this.textcContrasennaProfesor.TabIndex = 15;
+            this.textcContrasennaProfesor.TabIndex = 3;
             // 
             // label9
             // 
@@ -469,7 +469,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(469, 526);
+            this.ClientSize = new System.Drawing.Size(460, 526);
             this.Controls.Add(this.radioPadre);
             this.Controls.Add(this.radioProfesor);
             this.Controls.Add(this.radioEstudiante);

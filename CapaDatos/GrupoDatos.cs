@@ -372,7 +372,7 @@ namespace CapaDatos
             return lista;
         }
 
-       
+
 
         public List<Usuario> SeleccionarEstudiantesGrupoProf(int idProf, int idgrupo)
         {
@@ -428,5 +428,6 @@ namespace CapaDatos
 
             return lista;
         }
+     
     }
 }

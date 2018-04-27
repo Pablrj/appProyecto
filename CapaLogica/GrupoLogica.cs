@@ -106,10 +106,12 @@ namespace CapaLogica
 
         }
 
-        public List<Usuario> SeleccionarTodosEstudiantesProf(int id,int idGrupo)
+        public List<Usuario> SeleccionarTodosEstudiantesProf(int id, int idGrupo)
         {
-            return datos.SeleccionarEstudiantesGrupoProf(id,idGrupo);
+            return datos.SeleccionarEstudiantesGrupoProf(id, idGrupo);
 
         }
+
+       
     }
 }

@@ -36,7 +36,7 @@ namespace appProyecto
         {
             try
             {
-
+                //SP_Estudiantes_Grupo_ProfID
                 dtgAsistencia.DataSource = new GrupoLogica().SeleccionarTodosEstudiantesProf(usuario.ID, Convert.ToInt32(this.textBox1.Text));
             }
             catch (Exception)
@@ -124,7 +124,7 @@ namespace appProyecto
             }
             try
             {
-                //dtgNotas
+                //SP_Estudiantes_Grupo_ProfID
                 dtgEstudiante.DataSource = new GrupoLogica().SeleccionarTodosEstudiantesProf
                     (usuario.ID,Convert.ToInt32(this.txtGrupoID.Text));
                 dtgNotas.DataSource = logica.SeleccionarTodos();
